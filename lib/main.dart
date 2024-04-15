@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:repository_get_app/resource/theme/color_theme.dart';
+import 'package:repository_get_app/resource/theme/text_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +14,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme:
-          ThemeData(useMaterial3: true, colorScheme: ColorTheme.lightScheme()),
-      darkTheme:
-          ThemeData(useMaterial3: true, colorScheme: ColorTheme.darkScheme()),
+      theme: ThemeData(
+        useMaterial3: true, //
+        colorScheme: ColorTheme.lightScheme(), //
+        textTheme: TextScheme.textTheme(),
+      ),
+      darkTheme: ThemeData(
+        useMaterial3: true, //
+        colorScheme: ColorTheme.darkScheme(),
+        textTheme: TextScheme.textTheme(),
+      ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
