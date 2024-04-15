@@ -3,5 +3,4 @@ include: package:pedantic_mono/analysis_options.yaml
 linter:
   rules:
     - cast_nullable_to_non_nullable
-    - avoid_returning_null_for_future
     - always_use_package_imports
