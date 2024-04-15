@@ -1,16 +1,56 @@
 # repository_get_app
 
-A new Flutter project.
+Toma-0 　コーディングテスト
 
-## Getting Started
+## 概要
 
-This project is a starting point for a Flutter application.
+Gituhub のリポジトリ検索アプリの実装
 
-A few resources to get you started if this is your first Flutter project:
+## 環境
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+IDE:version 1.88
+Flutter:3.19.5
+Dart:3.3.3
+DevTools:2.31.1
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 最終動作確認項目
+
+## コーディングテストの取り組み方
+
+1.仕様決定 2.タスク分解 3.デザイン作成(figma)
+4.CI/CD 設定 5.アクセストークンの追加 6.テーマの実装 7.共通部分の実装 8.フェイクデータの実装 9.共通ウィジェットの作成 10.検索画面 UI の作成
+11 リポジトリ詳細画面の作成
+12.API 通信の初期設定の実装 13.検索画面の通信周りを実装 14.詳細画面の通信周りの実装 15.リファクタリング
+(手が回ったら) 16.お気に入り画面の実装 17.ホーム画面の実装 18.ログインの実装
+
+## コーディングテスト前の評価ポイントに対する知識量
+
+実装経験あり
+・テーマ、ダークモードの実装
+
+実装経験があるものの自信なし
+・エラー処理
+・画面回転
+・レスポンシブ
+・多言語対応
+・アニメーション
+
+調べたことがあるものの実装経験なし
+・テスト全般
+・CI/CD
+
+知識に不安あり
+・READ ME の充実
+・適切なコメント
+・適切な git ignore の設定
+・適切なコミット粒度
+・適切なブランチ運用
+・簡潔性・可読性・安全性・保守性の高いコード
+・Dart の言語機能を適切に使いこなせているか
+
+利用経験あり
+・プルリクエスト機能の利用
+
+## 参考記事
+
+## AI プロンプト
