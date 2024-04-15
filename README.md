@@ -6,6 +6,9 @@ Toma-0 　コーディングテスト
 
 Gituhub のリポジトリ検索アプリの実装
 
+## figma 
+https://www.figma.com/file/gV3IphhzXHbP0rylxLlhdQ/Untitled?type=design&node-id=0%3A1&mode=design&t=hOHQrMrVMCvux6Y2-1
+
 ## 環境
 
 IDE:version 1.88<br>
