@@ -10,6 +10,7 @@ import 'package:repository_get_app/view_model/home/home_screen_notifier.dart';
 part 'home_scaffold.dart';
 part 'home_body.dart';
 part 'home_app_bar.dart';
+part 'home_drawer.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
