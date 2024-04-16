@@ -5,7 +5,7 @@ class FakesRepositoryList {
     id: 1,
     repositoryName: 'Example Repository',
     ownerName: 'Example Owner',
-    ownerImageUri: 'https://example.com/example_image.png',
+    ownerImageUri: 'https://fromtheasia.com/wp-content/uploads/NCG168.jpg',
     starCount: 100,
     watcherCount: 50,
     forksCount: 30,
