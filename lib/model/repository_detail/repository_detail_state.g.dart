@@ -19,7 +19,7 @@ _$RepositoryDetailStateImpl _$$RepositoryDetailStateImplFromJson(
       language: json['language'] as String,
       description: json['description'] as String,
       repositoryUrl: json['repositoryUrl'] as String,
-      upDateAt: json['upDateAt'] as String,
+      updatedAt: json['updatedAt'] as String,
     );
 
 Map<String, dynamic> _$$RepositoryDetailStateImplToJson(
@@ -35,5 +35,5 @@ Map<String, dynamic> _$$RepositoryDetailStateImplToJson(
       'language': instance.language,
       'description': instance.description,
       'repositoryUrl': instance.repositoryUrl,
-      'upDateAt': instance.upDateAt,
+      'updatedAt': instance.updatedAt,
     };

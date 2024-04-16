@@ -16,7 +16,7 @@ class RepositoryDetailState with _$RepositoryDetailState {
     required String language,
     required String description,
     required String repositoryUrl,
-    required String upDateAt,
+    required String updatedAt,
   }) = _RepositoryDetailState;
 
   factory RepositoryDetailState.fromJson(Map<String, dynamic> json) =>
