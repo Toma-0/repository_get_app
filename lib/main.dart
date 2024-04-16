@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/text_l10n.dart';
+import 'package:repository_get_app/resource/l10n/l10n_template.dart';
 import 'package:repository_get_app/resource/theme/color_theme.dart';
 import 'package:repository_get_app/resource/theme/text_theme.dart';
 
@@ -14,6 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: ThemeData(
         useMaterial3: true, //
         colorScheme: ColorTheme.lightScheme(), //
@@ -24,7 +28,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorTheme.darkScheme(),
         textTheme: TextScheme.textTheme(),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(
+        title: AppLocalizations.of(context)?.titleHomeScreen ?? //
+            I10n().titleHome,
+      ),
     );
   }
 }
@@ -95,8 +102,9 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              AppLocalizations.of(context)?.messagePushButtonManyTimes ??
+                  I10n().messagePushButtonManyTimes,
             ),
             Text(
               '$_counter',
