@@ -11,6 +11,9 @@ dependencies:
   envied: ^0.5.4+1
   flutter:
     sdk: flutter
+  flutter_localizations: # 多言語ライブラリの本体
+    sdk: flutter  
+  intl: ^0.18.1
   pedantic_mono: ^1.24.0+1
 
 dev_dependencies:
@@ -22,3 +25,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
