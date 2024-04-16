@@ -5,8 +5,10 @@ import 'package:repository_get_app/resource/l10n/l10n_template.dart';
 import 'package:repository_get_app/resource/theme/color_theme.dart';
 import 'package:repository_get_app/resource/theme/text_theme.dart';
 import 'package:repository_get_app/view_model/counter/counter_notifier.dart';
+import 'package:repository_get_app/view_model/home/home_screen_notifier.dart';
 
 part 'home_scaffold.dart';
+part 'home_body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

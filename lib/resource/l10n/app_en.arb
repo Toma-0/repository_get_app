@@ -1,5 +1,6 @@
 {
     "@@locale":"en",
     "titleHomeScreen":"Flutter Demo Home Page",
+    "labelSearch":"Search",
     "messagePushButtonManyTimes":"You have pushed the button this many times:"
 }

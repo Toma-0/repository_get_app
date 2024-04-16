@@ -8,7 +8,7 @@ class HomeScreenNotifier extends _$HomeScreenNotifier {
   @override
   HomeScreenState build() => HomeScreenState();
 
-  void changeSearchRelated() => state.copyWith(
+  void changeSearchRelated() => state = state.copyWith(
         toggleSearchRelatedWidgets: !state.toggleSearchRelatedWidgets,
       );
 }
