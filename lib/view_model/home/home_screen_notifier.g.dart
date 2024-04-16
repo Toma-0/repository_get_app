@@ -7,7 +7,7 @@ part of 'home_screen_notifier.dart';
 // **************************************************************************
 
 String _$homeScreenNotifierHash() =>
-    r'63fc13f97d92efcaa594731a3786e3a5e2d76389';
+    r'cebaee83fbeb9cef89bc5c243e9353d2ce6775c7';
 
 /// See also [HomeScreenNotifier].
 @ProviderFor(HomeScreenNotifier)

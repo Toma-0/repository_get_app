@@ -6,5 +6,8 @@ linter:
     - always_use_package_imports
 
 analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
   plugins:
     - custom_lint
