@@ -1,6 +1,6 @@
 import 'package:repository_get_app/model/repository_detail/repository_detail_state.dart';
 
-class FakesRepositoryList {
+class FakesRepositoryDetail {
   final RepositoryDetailState repositoryDetail = const RepositoryDetailState(
     id: 1,
     repositoryName: 'Example Repository',
