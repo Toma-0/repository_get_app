@@ -14,7 +14,9 @@ dependencies:
   flutter_localizations: # 多言語ライブラリの本体
     sdk: flutter  
   flutter_riverpod: ^2.5.1
+  freezed_annotation: ^2.4.1
   intl: ^0.18.1
+  json_annotation: ^4.8.1
   pedantic_mono: ^1.24.0+1
   riverpod_annotation: ^2.3.5
 
@@ -25,6 +27,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+  freezed: ^2.5.2
+  json_serializable: ^6.7.1
   riverpod_generator: ^2.4.0
   riverpod_lint: ^2.3.10
 
