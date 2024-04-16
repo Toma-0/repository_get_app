@@ -56,6 +56,6 @@ DevTools:2.31.1<br>
 <br>
 
 ## コーディングテスト時の振り返り一覧
-https://www.notion.so/86223b60c4064b41b45768af82d7474b?pvs=4
+https://panoramic-hosta-7d6.notion.site/86223b60c4064b41b45768af82d7474b?pvs=4
 
 ## AI プロンプト
