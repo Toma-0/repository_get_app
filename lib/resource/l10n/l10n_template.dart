@@ -18,7 +18,5 @@ class I10n {
   String get labelLanguageEn => 'English';
 
   //message:説明等に使用されるテキスト
-  String get messagePushButtonManyTimes =>
-      'You have pushed the button this many times:';
   String get messageSelectColorThemeMode => 'Please select a color theme';
 }

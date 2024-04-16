@@ -10,6 +10,5 @@
     "labelLanguageKo": "韓国語",
     "labelLanguageZh": "中国語",
     "labelLanguageEn": "英語", 
-    "messageSelectColorThemeMode":"カラーテーマを選択してください",
-    "messagePushButtonManyTimes":"あなたは何度もボタンを押すことができます："
+    "messageSelectColorThemeMode":"カラーテーマを選択してください"
 }

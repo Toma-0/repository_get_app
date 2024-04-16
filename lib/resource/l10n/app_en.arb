@@ -10,6 +10,5 @@
     "labelLanguageKo":"Korean",
     "labelLanguageZh":"Chinese",
     "labelLanguageEn":"English",  
-    "messageSelectColorThemeMode": "Please select a color theme",
-    "messagePushButtonManyTimes":"You have pushed the button this many times:"
+    "messageSelectColorThemeMode": "Please select a color theme"
 }
