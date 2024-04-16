@@ -8,7 +8,8 @@ class HomeScreenNotifier extends _$HomeScreenNotifier {
   @override
   HomeScreenState build() => HomeScreenState();
 
+  //検索バーを表示するかどうかの切り替えを行うフラグの状態変化
   void changeSearchRelated() => state = state.copyWith(
-        toggleSearchRelatedWidgets: !state.toggleSearchRelatedWidgets,
+        toggleShowSearchFieldWidgets: !state.toggleShowSearchFieldWidgets,
       );
 }

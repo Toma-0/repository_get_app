@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeScreenState {
-  bool get toggleSearchRelatedWidgets => throw _privateConstructorUsedError;
+  bool get toggleShowSearchFieldWidgets => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeScreenStateCopyWith<HomeScreenState> get copyWith =>
@@ -29,7 +29,7 @@ abstract class $HomeScreenStateCopyWith<$Res> {
           HomeScreenState value, $Res Function(HomeScreenState) then) =
       _$HomeScreenStateCopyWithImpl<$Res, HomeScreenState>;
   @useResult
-  $Res call({bool toggleSearchRelatedWidgets});
+  $Res call({bool toggleShowSearchFieldWidgets});
 }
 
 /// @nodoc
@@ -45,12 +45,12 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? toggleSearchRelatedWidgets = null,
+    Object? toggleShowSearchFieldWidgets = null,
   }) {
     return _then(_value.copyWith(
-      toggleSearchRelatedWidgets: null == toggleSearchRelatedWidgets
-          ? _value.toggleSearchRelatedWidgets
-          : toggleSearchRelatedWidgets // ignore: cast_nullable_to_non_nullable
+      toggleShowSearchFieldWidgets: null == toggleShowSearchFieldWidgets
+          ? _value.toggleShowSearchFieldWidgets
+          : toggleShowSearchFieldWidgets // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -64,7 +64,7 @@ abstract class _$$CreateImplCopyWith<$Res>
       __$$CreateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool toggleSearchRelatedWidgets});
+  $Res call({bool toggleShowSearchFieldWidgets});
 }
 
 /// @nodoc
@@ -78,12 +78,12 @@ class __$$CreateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? toggleSearchRelatedWidgets = null,
+    Object? toggleShowSearchFieldWidgets = null,
   }) {
     return _then(_$CreateImpl(
-      toggleSearchRelatedWidgets: null == toggleSearchRelatedWidgets
-          ? _value.toggleSearchRelatedWidgets
-          : toggleSearchRelatedWidgets // ignore: cast_nullable_to_non_nullable
+      toggleShowSearchFieldWidgets: null == toggleShowSearchFieldWidgets
+          ? _value.toggleShowSearchFieldWidgets
+          : toggleShowSearchFieldWidgets // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -92,15 +92,15 @@ class __$$CreateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$CreateImpl implements _Create {
-  _$CreateImpl({this.toggleSearchRelatedWidgets = false});
+  _$CreateImpl({this.toggleShowSearchFieldWidgets = false});
 
   @override
   @JsonKey()
-  final bool toggleSearchRelatedWidgets;
+  final bool toggleShowSearchFieldWidgets;
 
   @override
   String toString() {
-    return 'HomeScreenState(toggleSearchRelatedWidgets: $toggleSearchRelatedWidgets)';
+    return 'HomeScreenState(toggleShowSearchFieldWidgets: $toggleShowSearchFieldWidgets)';
   }
 
   @override
@@ -108,14 +108,14 @@ class _$CreateImpl implements _Create {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateImpl &&
-            (identical(other.toggleSearchRelatedWidgets,
-                    toggleSearchRelatedWidgets) ||
-                other.toggleSearchRelatedWidgets ==
-                    toggleSearchRelatedWidgets));
+            (identical(other.toggleShowSearchFieldWidgets,
+                    toggleShowSearchFieldWidgets) ||
+                other.toggleShowSearchFieldWidgets ==
+                    toggleShowSearchFieldWidgets));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, toggleSearchRelatedWidgets);
+  int get hashCode => Object.hash(runtimeType, toggleShowSearchFieldWidgets);
 
   @JsonKey(ignore: true)
   @override
@@ -125,10 +125,10 @@ class _$CreateImpl implements _Create {
 }
 
 abstract class _Create implements HomeScreenState {
-  factory _Create({final bool toggleSearchRelatedWidgets}) = _$CreateImpl;
+  factory _Create({final bool toggleShowSearchFieldWidgets}) = _$CreateImpl;
 
   @override
-  bool get toggleSearchRelatedWidgets;
+  bool get toggleShowSearchFieldWidgets;
   @override
   @JsonKey(ignore: true)
   _$$CreateImplCopyWith<_$CreateImpl> get copyWith =>
