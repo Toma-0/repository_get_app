@@ -2,5 +2,14 @@
     "@@locale":"en",
     "titleHomeScreen":"Flutter Demo Home Page",
     "labelSearch":"Search",
+    "labelThemeModeDark":"Dark Mode",
+    "labelThemeModeLight":"Light Mode",
+    "labelThemeModeSystem":"Match system settings",
+    "labelUserInfo":"User Information",
+    "labelLangageJa":"Japanese",
+    "labelLanguageKo":"Korean",
+    "labelLanguageZh":"Chinese",
+    "labelLanguageEn":"English",  
+    "messageSelectColorThemeMode": "Please select a color theme",
     "messagePushButtonManyTimes":"You have pushed the button this many times:"
 }

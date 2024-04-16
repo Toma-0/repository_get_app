@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$HomeScreenState {
   bool get toggleShowSearchFieldWidgets => throw _privateConstructorUsedError;
+  ThemeMode get colorThemeMode => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeScreenStateCopyWith<HomeScreenState> get copyWith =>
@@ -29,7 +30,7 @@ abstract class $HomeScreenStateCopyWith<$Res> {
           HomeScreenState value, $Res Function(HomeScreenState) then) =
       _$HomeScreenStateCopyWithImpl<$Res, HomeScreenState>;
   @useResult
-  $Res call({bool toggleShowSearchFieldWidgets});
+  $Res call({bool toggleShowSearchFieldWidgets, ThemeMode colorThemeMode});
 }
 
 /// @nodoc
@@ -46,12 +47,17 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
   @override
   $Res call({
     Object? toggleShowSearchFieldWidgets = null,
+    Object? colorThemeMode = null,
   }) {
     return _then(_value.copyWith(
       toggleShowSearchFieldWidgets: null == toggleShowSearchFieldWidgets
           ? _value.toggleShowSearchFieldWidgets
           : toggleShowSearchFieldWidgets // ignore: cast_nullable_to_non_nullable
               as bool,
+      colorThemeMode: null == colorThemeMode
+          ? _value.colorThemeMode
+          : colorThemeMode // ignore: cast_nullable_to_non_nullable
+              as ThemeMode,
     ) as $Val);
   }
 }
@@ -64,7 +70,7 @@ abstract class _$$CreateImplCopyWith<$Res>
       __$$CreateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool toggleShowSearchFieldWidgets});
+  $Res call({bool toggleShowSearchFieldWidgets, ThemeMode colorThemeMode});
 }
 
 /// @nodoc
@@ -79,12 +85,17 @@ class __$$CreateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? toggleShowSearchFieldWidgets = null,
+    Object? colorThemeMode = null,
   }) {
     return _then(_$CreateImpl(
       toggleShowSearchFieldWidgets: null == toggleShowSearchFieldWidgets
           ? _value.toggleShowSearchFieldWidgets
           : toggleShowSearchFieldWidgets // ignore: cast_nullable_to_non_nullable
               as bool,
+      colorThemeMode: null == colorThemeMode
+          ? _value.colorThemeMode
+          : colorThemeMode // ignore: cast_nullable_to_non_nullable
+              as ThemeMode,
     ));
   }
 }
@@ -92,15 +103,20 @@ class __$$CreateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$CreateImpl implements _Create {
-  _$CreateImpl({this.toggleShowSearchFieldWidgets = false});
+  _$CreateImpl(
+      {this.toggleShowSearchFieldWidgets = false,
+      this.colorThemeMode = ThemeMode.system});
 
   @override
   @JsonKey()
   final bool toggleShowSearchFieldWidgets;
+  @override
+  @JsonKey()
+  final ThemeMode colorThemeMode;
 
   @override
   String toString() {
-    return 'HomeScreenState(toggleShowSearchFieldWidgets: $toggleShowSearchFieldWidgets)';
+    return 'HomeScreenState(toggleShowSearchFieldWidgets: $toggleShowSearchFieldWidgets, colorThemeMode: $colorThemeMode)';
   }
 
   @override
@@ -111,11 +127,14 @@ class _$CreateImpl implements _Create {
             (identical(other.toggleShowSearchFieldWidgets,
                     toggleShowSearchFieldWidgets) ||
                 other.toggleShowSearchFieldWidgets ==
-                    toggleShowSearchFieldWidgets));
+                    toggleShowSearchFieldWidgets) &&
+            (identical(other.colorThemeMode, colorThemeMode) ||
+                other.colorThemeMode == colorThemeMode));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, toggleShowSearchFieldWidgets);
+  int get hashCode =>
+      Object.hash(runtimeType, toggleShowSearchFieldWidgets, colorThemeMode);
 
   @JsonKey(ignore: true)
   @override
@@ -125,10 +144,14 @@ class _$CreateImpl implements _Create {
 }
 
 abstract class _Create implements HomeScreenState {
-  factory _Create({final bool toggleShowSearchFieldWidgets}) = _$CreateImpl;
+  factory _Create(
+      {final bool toggleShowSearchFieldWidgets,
+      final ThemeMode colorThemeMode}) = _$CreateImpl;
 
   @override
   bool get toggleShowSearchFieldWidgets;
+  @override
+  ThemeMode get colorThemeMode;
   @override
   @JsonKey(ignore: true)
   _$$CreateImplCopyWith<_$CreateImpl> get copyWith =>

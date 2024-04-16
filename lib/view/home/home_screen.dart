@@ -11,10 +11,10 @@ part 'home_scaffold.dart';
 part 'home_body.dart';
 part 'home_app_bar.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     // TODO(Toma-0): Themeを一か所にまとめるようにしたい
 
     return MaterialApp(
@@ -31,6 +31,7 @@ class HomeScreen extends StatelessWidget {
         colorScheme: ColorTheme.darkScheme(),
         textTheme: TextScheme.textTheme(),
       ),
+      themeMode: ref.watch(homeScreenNotifierProvider).colorThemeMode,
       home: const HomeScaffold(),
     );
   }
