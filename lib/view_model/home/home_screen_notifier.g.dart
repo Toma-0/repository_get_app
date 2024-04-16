@@ -6,21 +6,22 @@ part of 'home_screen_notifier.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$counterNotifierHash() => r'e4aad2bfb339f2ab395f4346c32dad0cec996ff6';
+String _$homeScreenNotifierHash() =>
+    r'a374a72802479a5f77039530551f77439cff2b87';
 
-/// See also [CounterNotifier].
-@ProviderFor(CounterNotifier)
-final counterNotifierProvider =
-    AutoDisposeNotifierProvider<CounterNotifier, HomeScreenState>.internal(
-  CounterNotifier.new,
-  name: r'counterNotifierProvider',
+/// See also [HomeScreenNotifier].
+@ProviderFor(HomeScreenNotifier)
+final homeScreenNotifierProvider =
+    AutoDisposeNotifierProvider<HomeScreenNotifier, HomeScreenState>.internal(
+  HomeScreenNotifier.new,
+  name: r'homeScreenNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$counterNotifierHash,
+      : _$homeScreenNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$CounterNotifier = AutoDisposeNotifier<HomeScreenState>;
+typedef _$HomeScreenNotifier = AutoDisposeNotifier<HomeScreenState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

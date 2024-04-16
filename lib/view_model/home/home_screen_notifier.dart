@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'home_screen_notifier.g.dart';
 
 @riverpod
-class CounterNotifier extends _$CounterNotifier {
+class HomeScreenNotifier extends _$HomeScreenNotifier {
   @override
   HomeScreenState build() => HomeScreenState();
 
