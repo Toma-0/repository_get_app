@@ -7,16 +7,10 @@ class HomeScaffold extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: const HomeAppBar(),
-      drawer: const HomeDrawer(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            ref.watch(counterNotifierProvider.notifier).incrementCounter(),
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-      body: const HomeBody(),
+    return const Scaffold(
+      appBar: HomeAppBar(),
+      drawer: HomeDrawer(),
+      body: HomeBody(),
     );
   }
 }
