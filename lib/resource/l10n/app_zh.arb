@@ -1,5 +1,15 @@
 {
     "@@locale":"zh",
     "titleHomeScreen":"Flutter 演示主屏幕",
+    "labelSearch":"搜索",
+    "labelThemeModeDark":"黑暗模式",
+    "labelThemeModeLight":"浅色模式",
+    "labelThemeModeSystem":"匹配系统设置",
+    "labelUserInfo":"用户信息",
+    "labelLangageJa":"日语",
+    "labelLanguageKo":"韩语",
+    "labelLanguageZh":"中文",
+    "labelLanguageEn":"英语",  
+    "messageSelectColorThemeMode":"请选择颜色主题",
     "messagePushButtonManyTimes":"该按钮可多次按下："
 }

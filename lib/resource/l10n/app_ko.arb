@@ -1,5 +1,15 @@
 {
     "@@locale":"ko",
     "titleHomeScreen":"Flutter 데모 홈 화면",
+    "labelSearch":"검색",
+    "labelThemeModeDark":"어두운 모드",
+    "labelThemeModeLight":"라이트 모드",
+    "labelThemeModeSystem":"시스템 설정과 일치",
+    "labelUserInfo":"사용자 정보",
+    "labelLangageJa":"일본어",
+    "labelLanguageKo":"한국어",
+    "labelLanguageZh":"중국어",
+    "labelLanguageEn":"영어",  
+    "messageSelectColorThemeMode": "색상 테마를 선택해주세요",
     "messagePushButtonManyTimes":"버튼을 여러 번 누를 수 있습니다:"
 }

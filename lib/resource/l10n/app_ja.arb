@@ -1,5 +1,15 @@
 {
     "@@locale":"ja",
     "titleHomeScreen":"Flutter Demo ホーム画面",
+    "labelSearch":"検索",
+    "labelThemeModeDark":"ダークモード",
+    "labelThemeModeLight":"ライトモード",
+    "labelThemeModeSystem":"システム設定に合わせる",
+    "labelUserInfo": "ユーザー情報",
+    "labelLangageJa": "日本語",
+    "labelLanguageKo": "韓国語",
+    "labelLanguageZh": "中国語",
+    "labelLanguageEn": "英語", 
+    "messageSelectColorThemeMode":"カラーテーマを選択してください",
     "messagePushButtonManyTimes":"あなたは何度もボタンを押すことができます："
 }

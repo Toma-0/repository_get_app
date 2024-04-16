@@ -4,3 +4,7 @@ linter:
   rules:
     - cast_nullable_to_non_nullable
     - always_use_package_imports
+
+analyzer:
+  plugins:
+    - custom_lint
