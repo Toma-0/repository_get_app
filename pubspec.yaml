@@ -11,7 +11,7 @@ dependencies:
   envied: ^0.5.4+1
   flutter:
     sdk: flutter
-  flutter_localizations: # 多言語ライブラリの本体
+  flutter_localizations:
     sdk: flutter  
   flutter_riverpod: ^2.5.1
   freezed_annotation: ^2.4.1

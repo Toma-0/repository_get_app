@@ -1,27 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_screen_notifier.dart';
+part of 'campaign_detail_repository.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$homeScreenNotifierHash() =>
-    r'cebaee83fbeb9cef89bc5c243e9353d2ce6775c7';
+String _$fetchRepositoryDetailHash() =>
+    r'9687de0c508676c6292b12a7a583545344b5660c';
 
-/// See also [HomeScreenNotifier].
-@ProviderFor(HomeScreenNotifier)
-final homeScreenNotifierProvider =
-    AutoDisposeNotifierProvider<HomeScreenNotifier, HomeScreenState>.internal(
-  HomeScreenNotifier.new,
-  name: r'homeScreenNotifierProvider',
+/// See also [fetchRepositoryDetail].
+@ProviderFor(fetchRepositoryDetail)
+final fetchRepositoryDetailProvider =
+    AutoDisposeFutureProvider<List<RepositoryDetailState>>.internal(
+  fetchRepositoryDetail,
+  name: r'fetchRepositoryDetailProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$homeScreenNotifierHash,
+      : _$fetchRepositoryDetailHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$HomeScreenNotifier = AutoDisposeNotifier<HomeScreenState>;
+typedef FetchRepositoryDetailRef
+    = AutoDisposeFutureProviderRef<List<RepositoryDetailState>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
