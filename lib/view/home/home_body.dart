@@ -28,8 +28,11 @@ class HomeBody extends ConsumerWidget {
               return ListView.builder(
                 itemCount: data.length,
                 itemBuilder: (context, index) {
-                  return RepositoryListCard(
-                    repositoryListState: data[index],
+                  return InkWell(
+                    child: RepositoryListCard(
+                      repositoryListState: data[index],
+                    ),
+                    onTap: () {},
                   );
                 },
               );
