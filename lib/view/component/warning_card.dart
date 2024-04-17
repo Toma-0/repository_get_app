@@ -36,10 +36,11 @@ class WarningCard extends ConsumerWidget {
                   text: TextSpan(
                     children: [
                       const WidgetSpan(
-                          child: Icon(
-                        Icons.info_outline,
-                        size: 20,
-                      )),
+                        child: Icon(
+                          Icons.warning_amber_outlined,
+                          size: 20,
+                        ),
+                      ),
                       TextSpan(
                         text: title,
                         style: Theme.of(context).textTheme.titleMedium,

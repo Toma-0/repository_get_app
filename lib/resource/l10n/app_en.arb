@@ -10,5 +10,9 @@
     "labelLanguageKo":"Korean",
     "labelLanguageZh":"Chinese",
     "labelLanguageEn":"English",  
-    "messageSelectColorThemeMode": "Please select a color theme"
+    "labelRepositoryNotFound":"Repository not found",
+    "labelErrorOccurred":"An error has occurred",
+    "messageSelectColorThemeMode": "Please select a color theme",
+    "messageSearchingAgain":"Please try searching again using the following method\n1.Change the search words\n2.Make sure there are no misspellings",
+    "messageWaitMomen":"Please wait a moment and try searching again."
 }

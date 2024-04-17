@@ -10,5 +10,9 @@
     "labelLanguageKo":"한국어",
     "labelLanguageZh":"중국어",
     "labelLanguageEn":"영어",  
-    "messageSelectColorThemeMode": "색상 테마를 선택해주세요"
+    "labelRepositoryNotFound":"리포지토리를 찾을 수 없습니다",
+    "labelErrorOccurred":"에러가 발생했습니다",
+    "messageSelectColorThemeMode": "색상 테마를 선택해 주세요",
+    "messageSearchingAgain":"다음 방법으로 다시 검색해 주세요\n\n1. 검색어 변경\n2. 맞춤법 오류를 확인해주세요",
+    "messageWaitMomen":"시간을 두고 다시 검색을 시도해 주십시오"
 }

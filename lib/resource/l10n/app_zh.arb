@@ -10,5 +10,9 @@
     "labelLanguageKo":"韩语",
     "labelLanguageZh":"中文",
     "labelLanguageEn":"英语",  
-    "messageSelectColorThemeMode":"请选择颜色主题"
+    "labelRepositoryNotFound":"未找到存储库",
+    "labelErrorOccurred":"出现错误",
+    "messageSelectColorThemeMode": "请选择颜色主题",
+    "messageSearchingAgain":"请尝试使用以下方法重新搜索\n\n1.更改搜索字词\n2.确保没有拼写错误",
+    "messageWaitMomen":"请稍等片刻，然后重新搜索"
 }
