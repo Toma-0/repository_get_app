@@ -4,7 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:repository_get_app/resource/l10n/l10n_template.dart';
 import 'package:repository_get_app/resource/theme/color_theme.dart';
 import 'package:repository_get_app/resource/theme/text_theme.dart';
-import 'package:repository_get_app/view_model/counter/counter_notifier.dart';
+import 'package:repository_get_app/view/component/information_card.dart';
+import 'package:repository_get_app/view/component/repository_card.dart';
+import 'package:repository_get_app/view/component/warning_card.dart';
+import 'package:repository_get_app/view_model/api/campaign_list/campaign_list_repository.dart';
 import 'package:repository_get_app/view_model/home/home_screen_notifier.dart';
 
 part 'home_scaffold.dart';

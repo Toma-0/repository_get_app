@@ -10,6 +10,9 @@
     "labelLanguageKo": "韓国語",
     "labelLanguageZh": "中国語",
     "labelLanguageEn": "英語", 
-    "messageSelectColorThemeMode":"カラーテーマを選択してください",
-    "messagePushButtonManyTimes":"あなたは何度もボタンを押すことができます："
+    "labelRepositoryNotFound":"リポジトリが見つかりません",
+    "labelErrorOccurred":"エラーが発生しました",
+    "messageSelectColorThemeMode": "カラーテーマを選択してください",
+    "messageSearchingAgain":"以下の方法で再度検索を行ってください\n\n1.検索ワードを変更する\n2.スペルミスがないか確認してください",
+    "messageWaitMomen":"しばらく待ってから、もう一度検索してください。"
 }

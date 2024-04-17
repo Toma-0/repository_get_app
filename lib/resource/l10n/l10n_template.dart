@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 class I10n {
   factory I10n() => _instance ??= I10n._();
   I10n._();
@@ -16,9 +18,13 @@ class I10n {
   String get labelLanguageKo => 'Korean';
   String get labelLanguageZh => 'Chinese';
   String get labelLanguageEn => 'English';
+  String get labelRepositoryNotFound => 'Repository not found';
+  String get labelErrorOccurred => 'An error has occurred';
 
   //message:説明等に使用されるテキスト
-  String get messagePushButtonManyTimes =>
-      'You have pushed the button this many times:';
   String get messageSelectColorThemeMode => 'Please select a color theme';
+  String get messageSearchingAgain =>
+      'Please try searching again using the following method\n1.Change the search words\n2.Make sure there are no misspellings';
+  String get messageWaitMoment =>
+      'Please wait a moment and try searching again.';
 }
