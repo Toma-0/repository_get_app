@@ -7,8 +7,15 @@ class HomeBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return const Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-    );
+    return ref.watch(fetchRepositoryListProvider).when(
+          data: (data) => ListView.builder(
+            itemCount: data.length,
+            itemBuilder: (context, index) => RepositoryListCard(
+              repositoryListState: data[index],
+            ),
+          ),
+          error: (error, stackTrace) => const Text('エラーが発生しました'),
+          loading: () => const CircularProgressIndicator(),
+        );
   }
 }

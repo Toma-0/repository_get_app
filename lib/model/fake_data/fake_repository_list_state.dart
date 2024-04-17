@@ -4,8 +4,8 @@ class FakesRepositoryList {
   final List<RepositoryListState> repositoryList = [
     const RepositoryListState(
       id: 26,
-      repositoryName: 'RepoName 1',
-      ownerName: 'Owner 16',
+      repositoryName: 'RepoName 1 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      ownerName: 'Owner 16aaaaaaaaaaaaaaaaaaaaaaaaaaaa',
       ownerImageUri:
           'https://fromtheasia.com/wp-content/uploads/NCG218-scaled.jpg',
       starCount: 100,
