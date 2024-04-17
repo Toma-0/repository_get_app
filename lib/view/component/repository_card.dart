@@ -53,7 +53,7 @@ class RepositoryListCard extends ConsumerWidget {
                     Text(
                       repositoryListState.repositoryName,
                       overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.labelLarge,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Gap(ratioHeight * 1),
                     Row(
