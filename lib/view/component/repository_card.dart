@@ -55,6 +55,12 @@ class RepositoryListCard extends ConsumerWidget {
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
+                    Text(
+                      repositoryListState.description,
+                      style: Theme.of(context).textTheme.bodySmall?.apply(
+                            color: Theme.of(context).colorScheme.surfaceTint,
+                          ),
+                    ),
                     Gap(ratioHeight * 1),
                     Row(
                       children: [
@@ -65,12 +71,12 @@ class RepositoryListCard extends ConsumerWidget {
                                 const WidgetSpan(
                                   child: Icon(
                                     Icons.update,
-                                    size: 16,
+                                    size: 14,
                                   ),
                                 ),
                                 TextSpan(
                                   text: date(repositoryListState.updatedAt),
-                                  style: Theme.of(context).textTheme.bodyMedium,
+                                  style: Theme.of(context).textTheme.bodySmall,
                                 ),
                                 WidgetSpan(
                                   child: Padding(
@@ -78,13 +84,13 @@ class RepositoryListCard extends ConsumerWidget {
                                         EdgeInsets.only(left: ratioWidth * 2),
                                     child: const Icon(
                                       Icons.person_2_outlined,
-                                      size: 16,
+                                      size: 14,
                                     ),
                                   ),
                                 ),
                                 TextSpan(
                                   text: repositoryListState.ownerName,
-                                  style: Theme.of(context).textTheme.bodyMedium,
+                                  style: Theme.of(context).textTheme.bodySmall,
                                 ),
                               ],
                             ),
@@ -97,7 +103,7 @@ class RepositoryListCard extends ConsumerWidget {
                             text: TextSpan(
                               children: [
                                 const WidgetSpan(
-                                  child: Icon(Icons.star, size: 16),
+                                  child: Icon(Icons.star, size: 14),
                                 ),
                                 TextSpan(
                                   text:

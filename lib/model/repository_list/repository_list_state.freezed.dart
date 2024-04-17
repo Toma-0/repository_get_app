@@ -26,6 +26,7 @@ mixin _$RepositoryListState {
   String get ownerImageUri => throw _privateConstructorUsedError;
   int get starCount => throw _privateConstructorUsedError;
   String get updatedAt => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,7 +46,8 @@ abstract class $RepositoryListStateCopyWith<$Res> {
       String ownerName,
       String ownerImageUri,
       int starCount,
-      String updatedAt});
+      String updatedAt,
+      String description});
 }
 
 /// @nodoc
@@ -67,6 +69,7 @@ class _$RepositoryListStateCopyWithImpl<$Res, $Val extends RepositoryListState>
     Object? ownerImageUri = null,
     Object? starCount = null,
     Object? updatedAt = null,
+    Object? description = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -93,6 +96,10 @@ class _$RepositoryListStateCopyWithImpl<$Res, $Val extends RepositoryListState>
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -111,7 +118,8 @@ abstract class _$$RepositoryListStateImplCopyWith<$Res>
       String ownerName,
       String ownerImageUri,
       int starCount,
-      String updatedAt});
+      String updatedAt,
+      String description});
 }
 
 /// @nodoc
@@ -131,6 +139,7 @@ class __$$RepositoryListStateImplCopyWithImpl<$Res>
     Object? ownerImageUri = null,
     Object? starCount = null,
     Object? updatedAt = null,
+    Object? description = null,
   }) {
     return _then(_$RepositoryListStateImpl(
       id: null == id
@@ -157,6 +166,10 @@ class __$$RepositoryListStateImplCopyWithImpl<$Res>
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -170,7 +183,8 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
       required this.ownerName,
       required this.ownerImageUri,
       required this.starCount,
-      required this.updatedAt});
+      required this.updatedAt,
+      required this.description});
 
   factory _$RepositoryListStateImpl.fromJson(Map<String, dynamic> json) =>
       _$$RepositoryListStateImplFromJson(json);
@@ -187,10 +201,12 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
   final int starCount;
   @override
   final String updatedAt;
+  @override
+  final String description;
 
   @override
   String toString() {
-    return 'RepositoryListState(id: $id, repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starCount: $starCount, updatedAt: $updatedAt)';
+    return 'RepositoryListState(id: $id, repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starCount: $starCount, updatedAt: $updatedAt, description: $description)';
   }
 
   @override
@@ -208,13 +224,15 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
             (identical(other.starCount, starCount) ||
                 other.starCount == starCount) &&
             (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt));
+                other.updatedAt == updatedAt) &&
+            (identical(other.description, description) ||
+                other.description == description));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, repositoryName, ownerName,
-      ownerImageUri, starCount, updatedAt);
+      ownerImageUri, starCount, updatedAt, description);
 
   @JsonKey(ignore: true)
   @override
@@ -238,7 +256,8 @@ abstract class _RepositoryListState implements RepositoryListState {
       required final String ownerName,
       required final String ownerImageUri,
       required final int starCount,
-      required final String updatedAt}) = _$RepositoryListStateImpl;
+      required final String updatedAt,
+      required final String description}) = _$RepositoryListStateImpl;
 
   factory _RepositoryListState.fromJson(Map<String, dynamic> json) =
       _$RepositoryListStateImpl.fromJson;
@@ -255,6 +274,8 @@ abstract class _RepositoryListState implements RepositoryListState {
   int get starCount;
   @override
   String get updatedAt;
+  @override
+  String get description;
   @override
   @JsonKey(ignore: true)
   _$$RepositoryListStateImplCopyWith<_$RepositoryListStateImpl> get copyWith =>
