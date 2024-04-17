@@ -9,6 +9,7 @@ import 'package:repository_get_app/view/component/repository_card.dart';
 import 'package:repository_get_app/view/component/warning_card.dart';
 import 'package:repository_get_app/view_model/api/campaign_list/campaign_list_repository.dart';
 import 'package:repository_get_app/view_model/home/home_screen_notifier.dart';
+import 'package:repository_get_app/view_model/size/size_notifier.dart';
 
 part 'home_scaffold.dart';
 part 'home_body.dart';
