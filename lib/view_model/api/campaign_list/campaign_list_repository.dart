@@ -1,6 +1,6 @@
-import 'package:repository_get_app/graphql/query_serch_repo.graphql.dart';
-import 'package:repository_get_app/model/fake_data/fake_repository_list_state.dart';
+// ignore_for_file: avoid_dynamic_calls
 
+import 'package:repository_get_app/graphql/query_serch_repo.graphql.dart';
 import 'package:repository_get_app/model/repository_list/repository_list_state.dart';
 import 'package:repository_get_app/view_model/api/graphql_client/graphql_client.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -25,9 +25,20 @@ Future<List<RepositoryListState>> fetchRepositoryList(
             ),
           );
 
-  print(repository.data.toString());
-
-  return Future.value(
-    FakesRepositoryList().repositoryList,
-  );
+  final repositoryListStateList = <RepositoryListState>[];
+  repository.parsedData?.search.edges?.forEach((element) {
+    final node = element!.node!.toJson();
+    repositoryListStateList.add(
+      RepositoryListState(
+        id: node['id'].toString(),
+        repositoryName: node['name'].toString(),
+        starCount: node['stargazerCount'].toString(),
+        updatedAt: node['updatedAt'].toString(),
+        description: node['description'].toString(),
+        ownerName: node['owner']['login'].toString(),
+        ownerImageUri: node['owner']['avatarUrl'].toString(),
+      ),
+    );
+  });
+  return Future.value(repositoryListStateList);
 }

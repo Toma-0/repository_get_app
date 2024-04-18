@@ -20,11 +20,11 @@ RepositoryListState _$RepositoryListStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RepositoryListState {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get repositoryName => throw _privateConstructorUsedError;
   String get ownerName => throw _privateConstructorUsedError;
   String get ownerImageUri => throw _privateConstructorUsedError;
-  int get starCount => throw _privateConstructorUsedError;
+  String get starCount => throw _privateConstructorUsedError;
   String get updatedAt => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
@@ -41,11 +41,11 @@ abstract class $RepositoryListStateCopyWith<$Res> {
       _$RepositoryListStateCopyWithImpl<$Res, RepositoryListState>;
   @useResult
   $Res call(
-      {int id,
+      {String id,
       String repositoryName,
       String ownerName,
       String ownerImageUri,
-      int starCount,
+      String starCount,
       String updatedAt,
       String description});
 }
@@ -75,7 +75,7 @@ class _$RepositoryListStateCopyWithImpl<$Res, $Val extends RepositoryListState>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       repositoryName: null == repositoryName
           ? _value.repositoryName
           : repositoryName // ignore: cast_nullable_to_non_nullable
@@ -91,7 +91,7 @@ class _$RepositoryListStateCopyWithImpl<$Res, $Val extends RepositoryListState>
       starCount: null == starCount
           ? _value.starCount
           : starCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -113,11 +113,11 @@ abstract class _$$RepositoryListStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int id,
+      {String id,
       String repositoryName,
       String ownerName,
       String ownerImageUri,
-      int starCount,
+      String starCount,
       String updatedAt,
       String description});
 }
@@ -145,7 +145,7 @@ class __$$RepositoryListStateImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       repositoryName: null == repositoryName
           ? _value.repositoryName
           : repositoryName // ignore: cast_nullable_to_non_nullable
@@ -161,7 +161,7 @@ class __$$RepositoryListStateImplCopyWithImpl<$Res>
       starCount: null == starCount
           ? _value.starCount
           : starCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -190,7 +190,7 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
       _$$RepositoryListStateImplFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String repositoryName;
   @override
@@ -198,7 +198,7 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
   @override
   final String ownerImageUri;
   @override
-  final int starCount;
+  final String starCount;
   @override
   final String updatedAt;
   @override
@@ -251,11 +251,11 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
 
 abstract class _RepositoryListState implements RepositoryListState {
   const factory _RepositoryListState(
-      {required final int id,
+      {required final String id,
       required final String repositoryName,
       required final String ownerName,
       required final String ownerImageUri,
-      required final int starCount,
+      required final String starCount,
       required final String updatedAt,
       required final String description}) = _$RepositoryListStateImpl;
 
@@ -263,7 +263,7 @@ abstract class _RepositoryListState implements RepositoryListState {
       _$RepositoryListStateImpl.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get repositoryName;
   @override
@@ -271,7 +271,7 @@ abstract class _RepositoryListState implements RepositoryListState {
   @override
   String get ownerImageUri;
   @override
-  int get starCount;
+  String get starCount;
   @override
   String get updatedAt;
   @override

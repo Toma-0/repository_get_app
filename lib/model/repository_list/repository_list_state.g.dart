@@ -9,11 +9,11 @@ part of 'repository_list_state.dart';
 _$RepositoryListStateImpl _$$RepositoryListStateImplFromJson(
         Map<String, dynamic> json) =>
     _$RepositoryListStateImpl(
-      id: json['id'] as int,
+      id: json['id'] as String,
       repositoryName: json['repositoryName'] as String,
       ownerName: json['ownerName'] as String,
       ownerImageUri: json['ownerImageUri'] as String,
-      starCount: json['starCount'] as int,
+      starCount: json['starCount'] as String,
       updatedAt: json['updatedAt'] as String,
       description: json['description'] as String,
     );

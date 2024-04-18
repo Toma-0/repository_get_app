@@ -6,11 +6,11 @@ part 'repository_list_state.g.dart';
 @freezed
 class RepositoryListState with _$RepositoryListState {
   const factory RepositoryListState({
-    required int id,
+    required String id,
     required String repositoryName,
     required String ownerName,
     required String ownerImageUri,
-    required int starCount,
+    required String starCount,
     required String updatedAt,
     required String description,
   }) = _RepositoryListState;

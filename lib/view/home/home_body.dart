@@ -16,7 +16,7 @@ class HomeBody extends ConsumerWidget {
         child: ref
             .watch(
               FetchRepositoryListProvider(
-                "test",
+                'test',
                 5,
               ),
             )
@@ -68,7 +68,7 @@ class HomeBody extends ConsumerWidget {
             ),
       ),
       onRefresh: () =>
-          ref.refresh(FetchRepositoryListProvider("test", 5).future),
+          ref.refresh(FetchRepositoryListProvider('test', 5).future),
     );
   }
 }
