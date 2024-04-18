@@ -13,6 +13,7 @@ import 'package:repository_get_app/view/component/show_info_widget/show_owner_in
 import 'package:repository_get_app/view/component/show_info_widget/show_update_at_widget.dart';
 import 'package:repository_get_app/view_model/api/campaign_detail/campaign_detail_repository.dart';
 import 'package:repository_get_app/view_model/size/size_notifier.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 part 'repository_detail_body.dart';
 
@@ -29,8 +30,8 @@ class RepositoryDetailScreen extends ConsumerWidget {
             body: RepositoryDetailBody(data: data),
             bottomNavigationBar: BottomAppBar(
               child: ElevatedButton(
-                child: Text('リポジトリを開く'),
-                onPressed: () {},
+                child: const Text('リポジトリを開く'),
+                onPressed: () => launchUrlString(data.repositoryUrl),
               ),
             ),
           ),
