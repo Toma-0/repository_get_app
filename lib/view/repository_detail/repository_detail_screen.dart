@@ -22,7 +22,9 @@ class RepositoryDetailScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref.watch(fetchRepositoryDetailProvider).when(
+    return ref
+        .watch(FetchRepositoryDetailProvider("MDEwOlJlcG9zaXRvcnkzOTEwOTQ1"))
+        .when(
           data: (data) => Scaffold(
             appBar: AppBar(
               title: Text(data.repositoryName),

@@ -1,5 +1,5 @@
 
-query GetDetailRepository($id:String!){
+query GetDetailRepository($id:ID!){
   node(id:$id) {
     ... on Repository {
       name

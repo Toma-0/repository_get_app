@@ -251,7 +251,7 @@ const documentNodeQueryGetDetailRepository = DocumentNode(definitions: [
       VariableDefinitionNode(
         variable: VariableNode(name: NameNode(value: 'id')),
         type: NamedTypeNode(
-          name: NameNode(value: 'String'),
+          name: NameNode(value: 'ID'),
           isNonNull: true,
         ),
         defaultValue: DefaultValueNode(value: null),
