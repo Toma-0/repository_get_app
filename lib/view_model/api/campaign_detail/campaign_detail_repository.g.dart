@@ -7,12 +7,12 @@ part of 'campaign_detail_repository.dart';
 // **************************************************************************
 
 String _$fetchRepositoryDetailHash() =>
-    r'9687de0c508676c6292b12a7a583545344b5660c';
+    r'f209158cb88518b945e4fc08a6dfe60f8da736a1';
 
 /// See also [fetchRepositoryDetail].
 @ProviderFor(fetchRepositoryDetail)
 final fetchRepositoryDetailProvider =
-    AutoDisposeFutureProvider<List<RepositoryDetailState>>.internal(
+    AutoDisposeFutureProvider<RepositoryDetailState>.internal(
   fetchRepositoryDetail,
   name: r'fetchRepositoryDetailProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -23,6 +23,6 @@ final fetchRepositoryDetailProvider =
 );
 
 typedef FetchRepositoryDetailRef
-    = AutoDisposeFutureProviderRef<List<RepositoryDetailState>>;
+    = AutoDisposeFutureProviderRef<RepositoryDetailState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
