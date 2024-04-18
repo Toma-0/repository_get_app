@@ -61879,7 +61879,7 @@ type WorkflowFileReference {
   The ref (branch or tag) of the workflow file to use
   """
   ref: String
-flutter pub add graphql_flutter
+
   """
   The ID of the repository where the workflow is defined
   """

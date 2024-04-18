@@ -1,0 +1,22 @@
+
+query SearchRepoInfo($query:String!,$first:Int!,$last:Int!){
+  search(
+    query: $query, type: REPOSITORY, first:$first,last: $last
+  ){    edges {
+      node {
+        ... on Repository {
+          id
+          name
+          stargazerCount
+          updatedAt
+          description
+          owner {
+            login
+            avatarUrl(size: 100)
+          }
+          
+        }
+      }
+    }
+  }
+}
