@@ -1,7 +1,7 @@
 
-query SearchRepoInfo($query:String!,$first:Int!,$last:Int!){
+query SearchRepoInfo($query:String!,$first:Int!){
   search(
-    query: $query, type: REPOSITORY, first:$first,last: $last
+    query: $query, type: REPOSITORY, first:$first,
   ){    edges {
       node {
         ... on Repository {

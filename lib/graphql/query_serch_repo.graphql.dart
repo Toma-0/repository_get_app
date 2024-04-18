@@ -8,12 +8,10 @@ class Variables$Query$SearchRepoInfo {
   factory Variables$Query$SearchRepoInfo({
     required String query,
     required int first,
-    required int last,
   }) =>
       Variables$Query$SearchRepoInfo._({
         r'query': query,
         r'first': first,
-        r'last': last,
       });
 
   Variables$Query$SearchRepoInfo._(this._$data);
@@ -24,8 +22,6 @@ class Variables$Query$SearchRepoInfo {
     result$data['query'] = (l$query as String);
     final l$first = data['first'];
     result$data['first'] = (l$first as int);
-    final l$last = data['last'];
-    result$data['last'] = (l$last as int);
     return Variables$Query$SearchRepoInfo._(result$data);
   }
 
@@ -35,16 +31,12 @@ class Variables$Query$SearchRepoInfo {
 
   int get first => (_$data['first'] as int);
 
-  int get last => (_$data['last'] as int);
-
   Map<String, dynamic> toJson() {
     final result$data = <String, dynamic>{};
     final l$query = query;
     result$data['query'] = l$query;
     final l$first = first;
     result$data['first'] = l$first;
-    final l$last = last;
-    result$data['last'] = l$last;
     return result$data;
   }
 
@@ -73,11 +65,6 @@ class Variables$Query$SearchRepoInfo {
     if (l$first != lOther$first) {
       return false;
     }
-    final l$last = last;
-    final lOther$last = other.last;
-    if (l$last != lOther$last) {
-      return false;
-    }
     return true;
   }
 
@@ -85,11 +72,9 @@ class Variables$Query$SearchRepoInfo {
   int get hashCode {
     final l$query = query;
     final l$first = first;
-    final l$last = last;
     return Object.hashAll([
       l$query,
       l$first,
-      l$last,
     ]);
   }
 }
@@ -106,7 +91,6 @@ abstract class CopyWith$Variables$Query$SearchRepoInfo<TRes> {
   TRes call({
     String? query,
     int? first,
-    int? last,
   });
 }
 
@@ -126,13 +110,11 @@ class _CopyWithImpl$Variables$Query$SearchRepoInfo<TRes>
   TRes call({
     Object? query = _undefined,
     Object? first = _undefined,
-    Object? last = _undefined,
   }) =>
       _then(Variables$Query$SearchRepoInfo._({
         ..._instance._$data,
         if (query != _undefined && query != null) 'query': (query as String),
         if (first != _undefined && first != null) 'first': (first as int),
-        if (last != _undefined && last != null) 'last': (last as int),
       }));
 }
 
@@ -145,7 +127,6 @@ class _CopyWithStubImpl$Variables$Query$SearchRepoInfo<TRes>
   call({
     String? query,
     int? first,
-    int? last,
   }) =>
       _res;
 }
@@ -307,15 +288,6 @@ const documentNodeQuerySearchRepoInfo = DocumentNode(definitions: [
         defaultValue: DefaultValueNode(value: null),
         directives: [],
       ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'last')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: true,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
     ],
     directives: [],
     selectionSet: SelectionSetNode(selections: [
@@ -334,10 +306,6 @@ const documentNodeQuerySearchRepoInfo = DocumentNode(definitions: [
           ArgumentNode(
             name: NameNode(value: 'first'),
             value: VariableNode(name: NameNode(value: 'first')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'last'),
-            value: VariableNode(name: NameNode(value: 'last')),
           ),
         ],
         directives: [],

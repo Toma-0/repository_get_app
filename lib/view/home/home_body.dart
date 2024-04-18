@@ -13,7 +13,14 @@ class HomeBody extends ConsumerWidget {
           horizontal:
               ref.watch(SizeNotifierProvider(context)).ratioSizeWidth * 2,
         ),
-        child: ref.watch(fetchRepositoryListProvider).when(
+        child: ref
+            .watch(
+              FetchRepositoryListProvider(
+                "test",
+                5,
+              ),
+            )
+            .when(
               data: (data) {
                 if (data.isEmpty) {
                   return ListView(
@@ -60,7 +67,8 @@ class HomeBody extends ConsumerWidget {
               ),
             ),
       ),
-      onRefresh: () => ref.refresh(fetchRepositoryListProvider.future),
+      onRefresh: () =>
+          ref.refresh(FetchRepositoryListProvider("test", 5).future),
     );
   }
 }
