@@ -7,7 +7,7 @@ part of 'campaign_detail_repository.dart';
 // **************************************************************************
 
 String _$fetchRepositoryDetailHash() =>
-    r'39046c4b6f9659e6898564eb58a887f294497d96';
+    r'9f4ad517c0620291d5582a2c91140454a1eb5061';
 
 /// Copied from Dart SDK
 class _SystemHash {

@@ -8,5 +8,6 @@ class HomeScreenState with _$HomeScreenState {
   factory HomeScreenState({
     @Default(false) bool toggleShowSearchFieldWidgets,
     @Default(ThemeMode.system) ThemeMode colorThemeMode,
+    @Default('') String serchWords,
   }) = _Create;
 }

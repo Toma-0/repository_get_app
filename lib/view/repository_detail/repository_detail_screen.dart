@@ -18,13 +18,15 @@ import 'package:url_launcher/url_launcher_string.dart';
 part 'repository_detail_body.dart';
 
 class RepositoryDetailScreen extends ConsumerWidget {
-  const RepositoryDetailScreen({super.key});
+  const RepositoryDetailScreen({
+    super.key,
+    required this.id,
+  });
+  final String id;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref
-        .watch(FetchRepositoryDetailProvider("MDEwOlJlcG9zaXRvcnkzOTEwOTQ1"))
-        .when(
+    return ref.watch(FetchRepositoryDetailProvider(id)).when(
           data: (data) => Scaffold(
             appBar: AppBar(
               title: Text(data.repositoryName),

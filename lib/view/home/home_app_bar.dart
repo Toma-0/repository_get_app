@@ -28,6 +28,9 @@ class SearchFieldAppBar extends ConsumerWidget {
           hintText:
               AppLocalizations.of(context)?.labelSearch ?? I10n().labelSearch,
         ),
+        onChanged: (text) => ref
+            .watch(homeScreenNotifierProvider.notifier)
+            .changeSerchWord(text),
       ),
       actions: [
         IconButton(

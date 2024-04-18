@@ -16,8 +16,8 @@ class HomeBody extends ConsumerWidget {
         child: ref
             .watch(
               FetchRepositoryListProvider(
-                'test',
-                5,
+                ref.watch(homeScreenNotifierProvider).serchWords,
+                20,
               ),
             )
             .when(
@@ -38,7 +38,7 @@ class HomeBody extends ConsumerWidget {
                 }
 
                 return ListView.builder(
-                  itemCount: data.length,
+                  itemCount: data.length + 1,
                   itemBuilder: (context, index) {
                     return InkWell(
                       child: RepositoryListCard(
@@ -48,7 +48,7 @@ class HomeBody extends ConsumerWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute<Scaffold>(
                             builder: (context) =>
-                                const RepositoryDetailScreen(),
+                                RepositoryDetailScreen(id: data[index].id),
                           ),
                         );
                       },

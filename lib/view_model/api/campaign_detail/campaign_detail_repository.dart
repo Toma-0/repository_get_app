@@ -1,5 +1,6 @@
+// ignore_for_file: avoid_dynamic_calls
+
 import 'package:repository_get_app/graphql/query_detail_repo.graphql.graphql.dart';
-import 'package:repository_get_app/model/fake_data/fake_repository_detail_state.dart';
 import 'package:repository_get_app/model/repository_detail/repository_detail_state.dart';
 import 'package:repository_get_app/view_model/api/graphql_client/graphql_client.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -32,7 +33,7 @@ Future<RepositoryDetailState> fetchRepositoryDetail(
       watchersCount: node['watchers']['totalCount'].toString(),
       forksCount: node['forksCount'].toString(),
       issuesCount: node['issues']['totalCount'].toString(),
-      language: node['languages']["nodes"].first["name"].toString(),
+      language: node['languages']['nodes'].first['name'].toString(),
       repositoryUrl: node['url'].toString(),
     ),
   );

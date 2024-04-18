@@ -11,6 +11,8 @@ class HomeScreenNotifier extends _$HomeScreenNotifier {
   @override
   HomeScreenState build() => HomeScreenState();
 
+  void changeSerchWord(String serchWord) =>
+      state = state.copyWith(serchWords: serchWord);
   //検索バーを表示するかどうかの切り替えを行うフラグの状態変化
   void changeSearchRelated() => state = state.copyWith(
         toggleShowSearchFieldWidgets: !state.toggleShowSearchFieldWidgets,
