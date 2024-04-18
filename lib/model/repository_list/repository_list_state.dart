@@ -12,6 +12,7 @@ class RepositoryListState with _$RepositoryListState {
     required String ownerImageUri,
     required int starCount,
     required String updatedAt,
+    required String description,
   }) = _RepositoryListState;
 
   factory RepositoryListState.fromJson(Map<String, dynamic> json) =>

@@ -25,9 +25,10 @@ mixin _$RepositoryDetailState {
   String get repositoryName => throw _privateConstructorUsedError;
   String get ownerName => throw _privateConstructorUsedError;
   String get ownerImageUri => throw _privateConstructorUsedError;
-  int get starCount => throw _privateConstructorUsedError;
-  int get watcherCount => throw _privateConstructorUsedError;
+  int get starsCount => throw _privateConstructorUsedError;
+  int get watchersCount => throw _privateConstructorUsedError;
   int get forksCount => throw _privateConstructorUsedError;
+  int get issuesCount => throw _privateConstructorUsedError;
   String get language => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String get repositoryUrl => throw _privateConstructorUsedError;
@@ -50,9 +51,10 @@ abstract class $RepositoryDetailStateCopyWith<$Res> {
       String repositoryName,
       String ownerName,
       String ownerImageUri,
-      int starCount,
-      int watcherCount,
+      int starsCount,
+      int watchersCount,
       int forksCount,
+      int issuesCount,
       String language,
       String description,
       String repositoryUrl,
@@ -77,9 +79,10 @@ class _$RepositoryDetailStateCopyWithImpl<$Res,
     Object? repositoryName = null,
     Object? ownerName = null,
     Object? ownerImageUri = null,
-    Object? starCount = null,
-    Object? watcherCount = null,
+    Object? starsCount = null,
+    Object? watchersCount = null,
     Object? forksCount = null,
+    Object? issuesCount = null,
     Object? language = null,
     Object? description = null,
     Object? repositoryUrl = null,
@@ -102,17 +105,21 @@ class _$RepositoryDetailStateCopyWithImpl<$Res,
           ? _value.ownerImageUri
           : ownerImageUri // ignore: cast_nullable_to_non_nullable
               as String,
-      starCount: null == starCount
-          ? _value.starCount
-          : starCount // ignore: cast_nullable_to_non_nullable
+      starsCount: null == starsCount
+          ? _value.starsCount
+          : starsCount // ignore: cast_nullable_to_non_nullable
               as int,
-      watcherCount: null == watcherCount
-          ? _value.watcherCount
-          : watcherCount // ignore: cast_nullable_to_non_nullable
+      watchersCount: null == watchersCount
+          ? _value.watchersCount
+          : watchersCount // ignore: cast_nullable_to_non_nullable
               as int,
       forksCount: null == forksCount
           ? _value.forksCount
           : forksCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      issuesCount: null == issuesCount
+          ? _value.issuesCount
+          : issuesCount // ignore: cast_nullable_to_non_nullable
               as int,
       language: null == language
           ? _value.language
@@ -148,9 +155,10 @@ abstract class _$$RepositoryDetailStateImplCopyWith<$Res>
       String repositoryName,
       String ownerName,
       String ownerImageUri,
-      int starCount,
-      int watcherCount,
+      int starsCount,
+      int watchersCount,
       int forksCount,
+      int issuesCount,
       String language,
       String description,
       String repositoryUrl,
@@ -173,9 +181,10 @@ class __$$RepositoryDetailStateImplCopyWithImpl<$Res>
     Object? repositoryName = null,
     Object? ownerName = null,
     Object? ownerImageUri = null,
-    Object? starCount = null,
-    Object? watcherCount = null,
+    Object? starsCount = null,
+    Object? watchersCount = null,
     Object? forksCount = null,
+    Object? issuesCount = null,
     Object? language = null,
     Object? description = null,
     Object? repositoryUrl = null,
@@ -198,17 +207,21 @@ class __$$RepositoryDetailStateImplCopyWithImpl<$Res>
           ? _value.ownerImageUri
           : ownerImageUri // ignore: cast_nullable_to_non_nullable
               as String,
-      starCount: null == starCount
-          ? _value.starCount
-          : starCount // ignore: cast_nullable_to_non_nullable
+      starsCount: null == starsCount
+          ? _value.starsCount
+          : starsCount // ignore: cast_nullable_to_non_nullable
               as int,
-      watcherCount: null == watcherCount
-          ? _value.watcherCount
-          : watcherCount // ignore: cast_nullable_to_non_nullable
+      watchersCount: null == watchersCount
+          ? _value.watchersCount
+          : watchersCount // ignore: cast_nullable_to_non_nullable
               as int,
       forksCount: null == forksCount
           ? _value.forksCount
           : forksCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      issuesCount: null == issuesCount
+          ? _value.issuesCount
+          : issuesCount // ignore: cast_nullable_to_non_nullable
               as int,
       language: null == language
           ? _value.language
@@ -238,9 +251,10 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
       required this.repositoryName,
       required this.ownerName,
       required this.ownerImageUri,
-      required this.starCount,
-      required this.watcherCount,
+      required this.starsCount,
+      required this.watchersCount,
       required this.forksCount,
+      required this.issuesCount,
       required this.language,
       required this.description,
       required this.repositoryUrl,
@@ -258,11 +272,13 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
   @override
   final String ownerImageUri;
   @override
-  final int starCount;
+  final int starsCount;
   @override
-  final int watcherCount;
+  final int watchersCount;
   @override
   final int forksCount;
+  @override
+  final int issuesCount;
   @override
   final String language;
   @override
@@ -274,7 +290,7 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
 
   @override
   String toString() {
-    return 'RepositoryDetailState(id: $id, repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starCount: $starCount, watcherCount: $watcherCount, forksCount: $forksCount, language: $language, description: $description, repositoryUrl: $repositoryUrl, updatedAt: $updatedAt)';
+    return 'RepositoryDetailState(id: $id, repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starsCount: $starsCount, watchersCount: $watchersCount, forksCount: $forksCount, issuesCount: $issuesCount, language: $language, description: $description, repositoryUrl: $repositoryUrl, updatedAt: $updatedAt)';
   }
 
   @override
@@ -289,12 +305,14 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
                 other.ownerName == ownerName) &&
             (identical(other.ownerImageUri, ownerImageUri) ||
                 other.ownerImageUri == ownerImageUri) &&
-            (identical(other.starCount, starCount) ||
-                other.starCount == starCount) &&
-            (identical(other.watcherCount, watcherCount) ||
-                other.watcherCount == watcherCount) &&
+            (identical(other.starsCount, starsCount) ||
+                other.starsCount == starsCount) &&
+            (identical(other.watchersCount, watchersCount) ||
+                other.watchersCount == watchersCount) &&
             (identical(other.forksCount, forksCount) ||
                 other.forksCount == forksCount) &&
+            (identical(other.issuesCount, issuesCount) ||
+                other.issuesCount == issuesCount) &&
             (identical(other.language, language) ||
                 other.language == language) &&
             (identical(other.description, description) ||
@@ -313,9 +331,10 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
       repositoryName,
       ownerName,
       ownerImageUri,
-      starCount,
-      watcherCount,
+      starsCount,
+      watchersCount,
       forksCount,
+      issuesCount,
       language,
       description,
       repositoryUrl,
@@ -342,9 +361,10 @@ abstract class _RepositoryDetailState implements RepositoryDetailState {
       required final String repositoryName,
       required final String ownerName,
       required final String ownerImageUri,
-      required final int starCount,
-      required final int watcherCount,
+      required final int starsCount,
+      required final int watchersCount,
       required final int forksCount,
+      required final int issuesCount,
       required final String language,
       required final String description,
       required final String repositoryUrl,
@@ -362,11 +382,13 @@ abstract class _RepositoryDetailState implements RepositoryDetailState {
   @override
   String get ownerImageUri;
   @override
-  int get starCount;
+  int get starsCount;
   @override
-  int get watcherCount;
+  int get watchersCount;
   @override
   int get forksCount;
+  @override
+  int get issuesCount;
   @override
   String get language;
   @override

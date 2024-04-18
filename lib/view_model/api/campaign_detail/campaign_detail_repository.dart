@@ -5,11 +5,11 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'campaign_detail_repository.g.dart';
 
 @riverpod
-Future<List<RepositoryDetailState>> fetchRepositoryDetail(
+Future<RepositoryDetailState> fetchRepositoryDetail(
   FetchRepositoryDetailRef ref,
 ) async {
   // Fakesクラスで作成したusersリストが返ってくる。
   return Future.value(
-    [FakesRepositoryDetail().repositoryDetail],
+    FakesRepositoryDetail().repositoryDetail,
   );
 }
