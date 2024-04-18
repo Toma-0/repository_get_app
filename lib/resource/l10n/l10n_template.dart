@@ -20,6 +20,10 @@ class I10n {
   String get labelLanguageEn => 'English';
   String get labelRepositoryNotFound => 'Repository not found';
   String get labelErrorOccurred => 'An error has occurred';
+  String get labelStars => 'stars';
+  String get labelWatching => 'watching';
+  String get labelForks => 'forks';
+  String get labelIssues => 'forks';
 
   //message:説明等に使用されるテキスト
   String get messageSelectColorThemeMode => 'Please select a color theme';

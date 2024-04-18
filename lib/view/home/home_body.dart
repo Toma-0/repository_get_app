@@ -37,7 +37,14 @@ class HomeBody extends ConsumerWidget {
                       child: RepositoryListCard(
                         repositoryListState: data[index],
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<Scaffold>(
+                            builder: (context) =>
+                                const RepositoryDetailScreen(),
+                          ),
+                        );
+                      },
                     );
                   },
                 );
