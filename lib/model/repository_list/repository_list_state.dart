@@ -10,7 +10,7 @@ class RepositoryListState with _$RepositoryListState {
     required String repositoryName,
     required String ownerName,
     required String ownerImageUri,
-    required String starCount,
+    required String starsCount,
     required String updatedAt,
     required String description,
   }) = _RepositoryListState;

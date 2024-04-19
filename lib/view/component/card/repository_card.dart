@@ -106,7 +106,7 @@ class RepositoryListCard extends ConsumerWidget {
                                   child: Icon(Icons.star, size: 14),
                                 ),
                                 TextSpan(
-                                  text: repositoryListState.starCount,
+                                  text: repositoryListState.starsCount,
                                   style: Theme.of(context).textTheme.labelSmall,
                                   spellOut: false,
                                 ),

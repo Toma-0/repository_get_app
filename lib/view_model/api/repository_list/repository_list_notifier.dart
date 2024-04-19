@@ -8,12 +8,13 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'repository_list_notifier.g.dart';
 
+// TODO(Toma-0): この形で引数を持たせるのはあまり良くなかった気がしている。
 @riverpod
 Future<RepositoryListNotifierState> fetchRepositoryList(
   FetchRepositoryListRef ref,
   String query,
   int first,
-  String? after,
+  String? cousor,
 ) async {
   // Fakesクラスで作成したusersリストが返ってくる。
   try {
@@ -23,7 +24,7 @@ Future<RepositoryListNotifierState> fetchRepositoryList(
                 variables: Variables$Query$SearchRepoInfo(
                   query: query,
                   first: first,
-                  after: after ?? '',
+                  after: cousor ?? '',
                 ),
               ),
             );
@@ -46,7 +47,7 @@ Future<RepositoryListNotifierState> fetchRepositoryList(
             RepositoryListState(
               id: node['id'].toString(),
               repositoryName: node['name'].toString(),
-              starCount: node['stargazerCount'].toString(),
+              starsCount: node['stargazerCount'].toString(),
               updatedAt: node['updatedAt'].toString(),
               description: node['description'].toString(),
               ownerName: node['owner']['login'].toString(),

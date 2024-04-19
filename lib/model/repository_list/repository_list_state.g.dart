@@ -13,7 +13,7 @@ _$RepositoryListStateImpl _$$RepositoryListStateImplFromJson(
       repositoryName: json['repositoryName'] as String,
       ownerName: json['ownerName'] as String,
       ownerImageUri: json['ownerImageUri'] as String,
-      starCount: json['starCount'] as String,
+      starsCount: json['starsCount'] as String,
       updatedAt: json['updatedAt'] as String,
       description: json['description'] as String,
     );
@@ -25,7 +25,7 @@ Map<String, dynamic> _$$RepositoryListStateImplToJson(
       'repositoryName': instance.repositoryName,
       'ownerName': instance.ownerName,
       'ownerImageUri': instance.ownerImageUri,
-      'starCount': instance.starCount,
+      'starsCount': instance.starsCount,
       'updatedAt': instance.updatedAt,
       'description': instance.description,
     };

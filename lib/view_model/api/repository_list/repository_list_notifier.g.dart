@@ -7,7 +7,7 @@ part of 'repository_list_notifier.dart';
 // **************************************************************************
 
 String _$fetchRepositoryListHash() =>
-    r'eec658cb8b1dbcf143f4a91e8776973cf50588de';
+    r'af763d1a245bc62adf9b0b8488a750914894c3fe';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -44,12 +44,12 @@ class FetchRepositoryListFamily
   FetchRepositoryListProvider call(
     String query,
     int first,
-    String? after,
+    String? cousor,
   ) {
     return FetchRepositoryListProvider(
       query,
       first,
-      after,
+      cousor,
     );
   }
 
@@ -60,7 +60,7 @@ class FetchRepositoryListFamily
     return call(
       provider.query,
       provider.first,
-      provider.after,
+      provider.cousor,
     );
   }
 
@@ -86,13 +86,13 @@ class FetchRepositoryListProvider
   FetchRepositoryListProvider(
     String query,
     int first,
-    String? after,
+    String? cousor,
   ) : this._internal(
           (ref) => fetchRepositoryList(
             ref as FetchRepositoryListRef,
             query,
             first,
-            after,
+            cousor,
           ),
           from: fetchRepositoryListProvider,
           name: r'fetchRepositoryListProvider',
@@ -105,7 +105,7 @@ class FetchRepositoryListProvider
               FetchRepositoryListFamily._allTransitiveDependencies,
           query: query,
           first: first,
-          after: after,
+          cousor: cousor,
         );
 
   FetchRepositoryListProvider._internal(
@@ -117,12 +117,12 @@ class FetchRepositoryListProvider
     required super.from,
     required this.query,
     required this.first,
-    required this.after,
+    required this.cousor,
   }) : super.internal();
 
   final String query;
   final int first;
-  final String? after;
+  final String? cousor;
 
   @override
   Override overrideWith(
@@ -141,7 +141,7 @@ class FetchRepositoryListProvider
         debugGetCreateSourceHash: null,
         query: query,
         first: first,
-        after: after,
+        cousor: cousor,
       ),
     );
   }
@@ -157,7 +157,7 @@ class FetchRepositoryListProvider
     return other is FetchRepositoryListProvider &&
         other.query == query &&
         other.first == first &&
-        other.after == after;
+        other.cousor == cousor;
   }
 
   @override
@@ -165,7 +165,7 @@ class FetchRepositoryListProvider
     var hash = _SystemHash.combine(0, runtimeType.hashCode);
     hash = _SystemHash.combine(hash, query.hashCode);
     hash = _SystemHash.combine(hash, first.hashCode);
-    hash = _SystemHash.combine(hash, after.hashCode);
+    hash = _SystemHash.combine(hash, cousor.hashCode);
 
     return _SystemHash.finish(hash);
   }
@@ -179,8 +179,8 @@ mixin FetchRepositoryListRef
   /// The parameter `first` of this provider.
   int get first;
 
-  /// The parameter `after` of this provider.
-  String? get after;
+  /// The parameter `cousor` of this provider.
+  String? get cousor;
 }
 
 class _FetchRepositoryListProviderElement
@@ -193,7 +193,7 @@ class _FetchRepositoryListProviderElement
   @override
   int get first => (origin as FetchRepositoryListProvider).first;
   @override
-  String? get after => (origin as FetchRepositoryListProvider).after;
+  String? get cousor => (origin as FetchRepositoryListProvider).cousor;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
