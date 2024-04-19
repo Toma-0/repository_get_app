@@ -1,18 +1,71 @@
 {
-    "@@locale":"ko",
-    "titleHomeScreen":"Flutter 데모 홈 화면",
-    "labelSearch":"검색",
-    "labelThemeModeDark":"어두운 모드",
-    "labelThemeModeLight":"라이트 모드",
-    "labelThemeModeSystem":"시스템 설정과 일치",
-    "labelUserInfo":"사용자 정보",
-    "labelLangageJa":"일본어",
-    "labelLanguageKo":"한국어",
-    "labelLanguageZh":"중국어",
-    "labelLanguageEn":"영어",  
-    "labelRepositoryNotFound":"리포지토리를 찾을 수 없습니다",
-    "labelErrorOccurred":"에러가 발생했습니다",
+    "@@locale": "ko",
+    "titleHomeScreen": "Flutter 데모 홈 화면",
+    "@titleHomeScreen": {
+        "description": "flutter demo home page"
+    },
+    "labelSearch": "검색",
+    "@labelSearch": {
+        "description": "search"
+    },
+    "labelThemeModeDark": "어두운 모드",
+    "@labelThemeModeDark": {
+        "description": "dark mode"
+    },
+    "labelThemeModeLight": "라이트 모드",
+    "@labelThemeModeLight": {
+        "description": "light mode"
+    },
+    "labelThemeModeSystem": "시스템 설정과 일치",
+    "@labelThemeModeSystem": {
+        "description": "Match theme mode to system settings"
+    },
+    "labelUserInfo": "사용자 정보",
+    "@labelUserInfo": {
+        "description": "User Github login Information"
+    },
+    "labelLangageJa": "일본어",
+    "@labelLangageJa": {
+        "description": "Japanese"
+    },
+    "labelLanguageKo": "한국어",
+    "@labelLanguageKo": {
+        "description": "Korean"
+    },
+    "labelLanguageZh": "중국어",
+    "@labelLanguageZh": {
+        "description": "Chinese"
+    },
+    "labelLanguageEn": "영어",
+    "@labelLanguageEn": {
+        "description": "English"
+    },
+    "labelRepositoryNotFound": "리포지토리를 찾을 수 없습니다",
+    "@labelRepositoryNotFound": {
+        "description": "Search results Repositories not found"
+    },
+    "labelErrorOccurred": "에러가 발생했습니다",
+    "@labelErrorOccurred": {
+        "description": "Some error occurred during the search."
+    },
+    "labelStartSearch": "검색을 시작하세요!",
+    "@labelStartSearch": {
+        "description": "Nothing has been entered in the search form"
+    },
     "messageSelectColorThemeMode": "색상 테마를 선택해 주세요",
-    "messageSearchingAgain":"다음 방법으로 다시 검색해 주세요\n\n1. 검색어 변경\n2. 맞춤법 오류를 확인해주세요",
-    "messageWaitMomen":"시간을 두고 다시 검색을 시도해 주십시오"
+    "@messageSelectColorThemeMode": {
+        "description": "Change the color theme of the screen"
+    },
+    "messageSearchingAgain": "다음 방법으로 다시 검색해 주세요\n\n1. 검색어 변경\n2. 맞춤법 오류를 확인해주세요",
+    "@messageSearchingAgain": {
+        "description": "Hints about the search that appear when the repository is not found"
+    },
+    "messageWaitMomen": "시간을 두고 다시 검색을 시도해 주십시오",
+    "@messageWaitMomen": {
+        "description": "Hints to display when errors occur"
+    },
+    "messageStartSearch": "오른쪽 상단의 검색 아이콘을 클릭하여 검색을 시작하세요",
+    "@messageStartSearch": {
+        "description": "Hint to be displayed when nothing is entered in the search form"
+    }
 }

@@ -1,18 +1,71 @@
 {
-    "@@locale":"en",
-    "titleHomeScreen":"Flutter Demo Home Page",
-    "labelSearch":"Search",
-    "labelThemeModeDark":"Dark Mode",
-    "labelThemeModeLight":"Light Mode",
-    "labelThemeModeSystem":"Match system settings",
-    "labelUserInfo":"User Information",
-    "labelLangageJa":"Japanese",
-    "labelLanguageKo":"Korean",
-    "labelLanguageZh":"Chinese",
-    "labelLanguageEn":"English",  
-    "labelRepositoryNotFound":"Repository not found",
-    "labelErrorOccurred":"An error has occurred",
+    "@@locale": "en",
+    "titleHomeScreen": "Flutter Demo Home Page",
+    "@titleHomeScreen": {
+        "description": "flutter demo home page"
+    },
+    "labelSearch": "Search",
+    "@labelSearch": {
+        "description": "search"
+    },
+    "labelThemeModeDark": "Dark Mode",
+    "@labelThemeModeDark": {
+        "description": "dark mode"
+    },
+    "labelThemeModeLight": "Light Mode",
+    "@labelThemeModeLight": {
+        "description": "light mode"
+    },
+    "labelThemeModeSystem": "Match system settings",
+    "@labelThemeModeSystem": {
+        "description": "Match theme mode to system settings"
+    },
+    "labelUserInfo": "User Information",
+    "@labelUserInfo": {
+        "description": "User Github login Information"
+    },
+    "labelLangageJa": "Japanese",
+    "@labelLangageJa": {
+        "description": "Japanese"
+    },
+    "labelLanguageKo": "Korean",
+    "@labelLanguageKo": {
+        "description": "Korean"
+    },
+    "labelLanguageZh": "Chinese",
+    "@labelLanguageZh": {
+        "description": "Chinese"
+    },
+    "labelLanguageEn": "English",
+    "@labelLanguageEn": {
+        "description": "English"
+    },
+    "labelRepositoryNotFound": "Repository not found",
+    "@labelRepositoryNotFound": {
+        "description": "Search results Repositories not found"
+    },
+    "labelErrorOccurred": "An error has occurred",
+    "@labelErrorOccurred": {
+        "description": "Some error occurred during the search."
+    },
+    "labelStartSearch": "Let the search begin!",
+    "@labelStartSearch": {
+        "description": "Nothing has been entered in the search form"
+    },
     "messageSelectColorThemeMode": "Please select a color theme",
-    "messageSearchingAgain":"Please try searching again using the following method\n1.Change the search words\n2.Make sure there are no misspellings",
-    "messageWaitMomen":"Please wait a moment and try searching again."
+    "@messageSelectColorThemeMode": {
+        "description": "Change the color theme of the screen"
+    },
+    "messageSearchingAgain": "Please try searching again using the following method\n1.Change the search words\n2.Make sure there are no misspellings",
+    "@messageSearchingAgain": {
+        "description": "Hints about the search that appear when the repository is not found"
+    },
+    "messageWaitMomen": "Please wait a moment and try searching again.",
+    "@messageWaitMomen": {
+        "description": "Hints to display when errors occur"
+    },
+    "messageStartSearch": "Start your search by clicking on the search icon in the upper right corner.",
+    "@messageStartSearch": {
+        "description": "Hint to be displayed when nothing is entered in the search form"
+    }
 }

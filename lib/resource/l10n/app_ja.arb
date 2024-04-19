@@ -1,18 +1,71 @@
 {
-    "@@locale":"ja",
-    "titleHomeScreen":"Flutter Demo ホーム画面",
-    "labelSearch":"検索",
-    "labelThemeModeDark":"ダークモード",
-    "labelThemeModeLight":"ライトモード",
-    "labelThemeModeSystem":"システム設定に合わせる",
+    "@@locale": "ja",
+    "titleHomeScreen": "Flutter Demo ホーム画面",
+    "@titleHomeScreen": {
+        "description": "flutter demo home page"
+    },
+    "labelSearch": "検索",
+    "@labelSearch": {
+        "description": "search"
+    },
+    "labelThemeModeDark": "ダークモード",
+    "@labelThemeModeDark": {
+        "description": "dark mode"
+    },
+    "labelThemeModeLight": "ライトモード",
+    "@labelThemeModeLight": {
+        "description": "light mode"
+    },
+    "labelThemeModeSystem": "システム設定に合わせる",
+    "@labelThemeModeSystem": {
+        "description": "Match theme mode to system settings"
+    },
     "labelUserInfo": "ユーザー情報",
+    "@labelUserInfo": {
+        "description": "User Github login Information"
+    },
     "labelLangageJa": "日本語",
+    "@labelLangageJa": {
+        "description": "Japanese"
+    },
     "labelLanguageKo": "韓国語",
+    "@labelLanguageKo": {
+        "description": "Korean"
+    },
     "labelLanguageZh": "中国語",
-    "labelLanguageEn": "英語", 
-    "labelRepositoryNotFound":"リポジトリが見つかりません",
-    "labelErrorOccurred":"エラーが発生しました",
+    "@labelLanguageZh": {
+        "description": "Chinese"
+    },
+    "labelLanguageEn": "英語",
+    "@labelLanguageEn": {
+        "description": "English"
+    },
+    "labelRepositoryNotFound": "リポジトリが見つかりません",
+    "@labelRepositoryNotFound": {
+        "description": "Search results Repositories not found"
+    },
+    "labelErrorOccurred": "エラーが発生しました",
+    "@labelErrorOccurred": {
+        "description": "Some error occurred during the search."
+    },
+    "labelStartSearch": "検索を始めましょう！",
+    "@labelStartSearch": {
+        "description": "Nothing has been entered in the search form"
+    },
     "messageSelectColorThemeMode": "カラーテーマを選択してください",
-    "messageSearchingAgain":"以下の方法で再度検索を行ってください\n\n1.検索ワードを変更する\n2.スペルミスがないか確認してください",
-    "messageWaitMomen":"しばらく待ってから、もう一度検索してください。"
+    "@messageSelectColorThemeMode": {
+        "description": "Change the color theme of the screen"
+    },
+    "messageSearchingAgain": "以下の方法で再度検索を行ってください\n\n1.検索ワードを変更する\n2.スペルミスがないか確認してください",
+    "@messageSearchingAgain": {
+        "description": "Hints about the search that appear when the repository is not found"
+    },
+    "messageWaitMomen": "しばらく待ってから、もう一度検索してください。",
+    "@messageWaitMomen": {
+        "description": "Hints to display when errors occur"
+    },
+    "messageStartSearch": "右上の検索アイコンをクリックして検索を開始します。",
+    "@messageStartSearch": {
+        "description": "Hint to be displayed when nothing is entered in the search form"
+    }
 }
