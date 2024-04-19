@@ -52,6 +52,18 @@
     "@labelStartSearch": {
         "description": "Nothing has been entered in the search form"
     },
+    "labelMoreSearch": "더 알아보기",
+    "@labelMoreSearch": {
+        "description": "Serch more repository"
+    },
+    "labelOpenRepository": "저장소 열기",
+    "@labelOpenRepository": {
+        "description": "Jump to the Github repository page"
+    },
+    "labelCommunicationFaild": "통신 오류가 발생했습니다",
+    "@labelCommunicationFaild": {
+        "description": "Indicates that an error occurred during api communication"
+    },
     "messageSelectColorThemeMode": "색상 테마를 선택해 주세요",
     "@messageSelectColorThemeMode": {
         "description": "Change the color theme of the screen"

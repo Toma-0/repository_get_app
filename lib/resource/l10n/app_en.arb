@@ -52,6 +52,18 @@
     "@labelStartSearch": {
         "description": "Nothing has been entered in the search form"
     },
+    "labelMoreSearch": "Explore further",
+    "@labelMoreSearch": {
+        "description": "Serch more repository"
+    },
+    "labelOpenRepository": "Open Repository",
+    "@labelOpenRepository": {
+        "description": "Jump to the Github repository page"
+    },
+    "labelCommunicationFaild": "Communication failed",
+    "@labelCommunicationFaild": {
+        "description": "Indicates that an error occurred during api communication"
+    },
     "messageSelectColorThemeMode": "Please select a color theme",
     "@messageSelectColorThemeMode": {
         "description": "Change the color theme of the screen"

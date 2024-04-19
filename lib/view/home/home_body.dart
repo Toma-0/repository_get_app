@@ -66,7 +66,10 @@ class HomeBody extends ConsumerWidget {
                               .read(homeScreenNotifierProvider.notifier)
                               .addSearchItemCount();
                         },
-                        child: const Text('さらに調べる'),
+                        child: Text(
+                          AppLocalizations.of(context)?.labelMoreSearch ??
+                              I10n().labelMoreSearch,
+                        ),
                       );
                     }
                     return InkWell(

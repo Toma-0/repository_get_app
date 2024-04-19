@@ -35,14 +35,20 @@ class RepositoryDetailScreen extends ConsumerWidget {
             body: RepositoryDetailBody(data: data),
             bottomNavigationBar: BottomAppBar(
               child: ElevatedButton(
-                child: const Text('リポジトリを開く'),
+                child: Text(
+                  AppLocalizations.of(context)?.labelMoreSearch ??
+                      I10n().labelMoreSearch,
+                ),
                 onPressed: () => launchUrlString(data.repositoryUrl),
               ),
             ),
           ),
           error: (error, stackTrace) => Scaffold(
             appBar: AppBar(
-              title: Text('通信に失敗しました'),
+              title: Text(
+                AppLocalizations.of(context)?.labelCommunicationFaild ??
+                    I10n().labelCommunicationFaild,
+              ),
             ),
             body: ShowContextWithImage(
               imageAssetsUri: 'assets/image/error_girl.png',

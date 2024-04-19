@@ -25,6 +25,9 @@ class I10n {
   String get labelForks => 'forks';
   String get labelIssues => 'Issues';
   String get labelStartSearch => 'Let the search begin! ';
+  String get labelMoreSearch => 'Explore further';
+  String get labelOpenRepository => 'Open Repository';
+  String get labelCommunicationFaild => 'Communication failed';
 
   //message:説明等に使用されるテキスト
   String get messageSelectColorThemeMode => 'Please select a color theme';
