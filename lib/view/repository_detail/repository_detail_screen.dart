@@ -5,7 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:repository_get_app/model/repository_detail/repository_detail_state.dart';
 import 'package:repository_get_app/resource/l10n/l10n_template.dart';
 import 'package:repository_get_app/view/component/card/show_widgets_card.dart';
-import 'package:repository_get_app/view/component/card/warning_card.dart';
+import 'package:repository_get_app/view/component/show_info_widget/show_context_with_image_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_counts_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_description_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_language_widget.dart';
@@ -40,11 +40,17 @@ class RepositoryDetailScreen extends ConsumerWidget {
               ),
             ),
           ),
-          error: (error, stackTrace) => WarningCard(
-            title: AppLocalizations.of(context)?.labelErrorOccurred ??
-                I10n().labelErrorOccurred,
-            message: AppLocalizations.of(context)?.messageWaitMomen ??
-                I10n().messageWaitMoment,
+          error: (error, stackTrace) => Scaffold(
+            appBar: AppBar(
+              title: Text('通信に失敗しました'),
+            ),
+            body: ShowContextWithImage(
+              imageAssetsUri: 'assets/image/error_girl.png',
+              title: AppLocalizations.of(context)?.labelErrorOccurred ??
+                  I10n().labelErrorOccurred,
+              message: AppLocalizations.of(context)?.messageWaitMomen ??
+                  I10n().messageWaitMoment,
+            ),
           ),
           loading: () => const Center(
             child: CircularProgressIndicator(),
