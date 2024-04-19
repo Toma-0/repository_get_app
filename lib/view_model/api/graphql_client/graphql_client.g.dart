@@ -1,28 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'campaign_list_repository.dart';
+part of 'graphql_client.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$fetchRepositoryListHash() =>
-    r'8a34c1560e4070a647bdc2f129ac6bf712183bc8';
+String _$graphQLClientHash() => r'eb0c0e8820669034cd0a4f971f99ce77297e4c18';
 
-/// See also [fetchRepositoryList].
-@ProviderFor(fetchRepositoryList)
-final fetchRepositoryListProvider =
-    AutoDisposeFutureProvider<List<RepositoryListState>>.internal(
-  fetchRepositoryList,
-  name: r'fetchRepositoryListProvider',
+/// See also [graphQLClient].
+@ProviderFor(graphQLClient)
+final graphQLClientProvider = AutoDisposeProvider<GraphQLClient>.internal(
+  graphQLClient,
+  name: r'graphQLClientProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$fetchRepositoryListHash,
+      : _$graphQLClientHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef FetchRepositoryListRef
-    = AutoDisposeFutureProviderRef<List<RepositoryListState>>;
+typedef GraphQLClientRef = AutoDisposeProviderRef<GraphQLClient>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

@@ -20,11 +20,11 @@ RepositoryListState _$RepositoryListStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RepositoryListState {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get repositoryName => throw _privateConstructorUsedError;
   String get ownerName => throw _privateConstructorUsedError;
   String get ownerImageUri => throw _privateConstructorUsedError;
-  int get starCount => throw _privateConstructorUsedError;
+  String get starsCount => throw _privateConstructorUsedError;
   String get updatedAt => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
@@ -41,11 +41,11 @@ abstract class $RepositoryListStateCopyWith<$Res> {
       _$RepositoryListStateCopyWithImpl<$Res, RepositoryListState>;
   @useResult
   $Res call(
-      {int id,
+      {String id,
       String repositoryName,
       String ownerName,
       String ownerImageUri,
-      int starCount,
+      String starsCount,
       String updatedAt,
       String description});
 }
@@ -67,7 +67,7 @@ class _$RepositoryListStateCopyWithImpl<$Res, $Val extends RepositoryListState>
     Object? repositoryName = null,
     Object? ownerName = null,
     Object? ownerImageUri = null,
-    Object? starCount = null,
+    Object? starsCount = null,
     Object? updatedAt = null,
     Object? description = null,
   }) {
@@ -75,7 +75,7 @@ class _$RepositoryListStateCopyWithImpl<$Res, $Val extends RepositoryListState>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       repositoryName: null == repositoryName
           ? _value.repositoryName
           : repositoryName // ignore: cast_nullable_to_non_nullable
@@ -88,10 +88,10 @@ class _$RepositoryListStateCopyWithImpl<$Res, $Val extends RepositoryListState>
           ? _value.ownerImageUri
           : ownerImageUri // ignore: cast_nullable_to_non_nullable
               as String,
-      starCount: null == starCount
-          ? _value.starCount
-          : starCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      starsCount: null == starsCount
+          ? _value.starsCount
+          : starsCount // ignore: cast_nullable_to_non_nullable
+              as String,
       updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -113,11 +113,11 @@ abstract class _$$RepositoryListStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int id,
+      {String id,
       String repositoryName,
       String ownerName,
       String ownerImageUri,
-      int starCount,
+      String starsCount,
       String updatedAt,
       String description});
 }
@@ -137,7 +137,7 @@ class __$$RepositoryListStateImplCopyWithImpl<$Res>
     Object? repositoryName = null,
     Object? ownerName = null,
     Object? ownerImageUri = null,
-    Object? starCount = null,
+    Object? starsCount = null,
     Object? updatedAt = null,
     Object? description = null,
   }) {
@@ -145,7 +145,7 @@ class __$$RepositoryListStateImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       repositoryName: null == repositoryName
           ? _value.repositoryName
           : repositoryName // ignore: cast_nullable_to_non_nullable
@@ -158,10 +158,10 @@ class __$$RepositoryListStateImplCopyWithImpl<$Res>
           ? _value.ownerImageUri
           : ownerImageUri // ignore: cast_nullable_to_non_nullable
               as String,
-      starCount: null == starCount
-          ? _value.starCount
-          : starCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      starsCount: null == starsCount
+          ? _value.starsCount
+          : starsCount // ignore: cast_nullable_to_non_nullable
+              as String,
       updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -182,7 +182,7 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
       required this.repositoryName,
       required this.ownerName,
       required this.ownerImageUri,
-      required this.starCount,
+      required this.starsCount,
       required this.updatedAt,
       required this.description});
 
@@ -190,7 +190,7 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
       _$$RepositoryListStateImplFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String repositoryName;
   @override
@@ -198,7 +198,7 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
   @override
   final String ownerImageUri;
   @override
-  final int starCount;
+  final String starsCount;
   @override
   final String updatedAt;
   @override
@@ -206,7 +206,7 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
 
   @override
   String toString() {
-    return 'RepositoryListState(id: $id, repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starCount: $starCount, updatedAt: $updatedAt, description: $description)';
+    return 'RepositoryListState(id: $id, repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starsCount: $starsCount, updatedAt: $updatedAt, description: $description)';
   }
 
   @override
@@ -221,8 +221,8 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
                 other.ownerName == ownerName) &&
             (identical(other.ownerImageUri, ownerImageUri) ||
                 other.ownerImageUri == ownerImageUri) &&
-            (identical(other.starCount, starCount) ||
-                other.starCount == starCount) &&
+            (identical(other.starsCount, starsCount) ||
+                other.starsCount == starsCount) &&
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
             (identical(other.description, description) ||
@@ -232,7 +232,7 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, repositoryName, ownerName,
-      ownerImageUri, starCount, updatedAt, description);
+      ownerImageUri, starsCount, updatedAt, description);
 
   @JsonKey(ignore: true)
   @override
@@ -251,11 +251,11 @@ class _$RepositoryListStateImpl implements _RepositoryListState {
 
 abstract class _RepositoryListState implements RepositoryListState {
   const factory _RepositoryListState(
-      {required final int id,
+      {required final String id,
       required final String repositoryName,
       required final String ownerName,
       required final String ownerImageUri,
-      required final int starCount,
+      required final String starsCount,
       required final String updatedAt,
       required final String description}) = _$RepositoryListStateImpl;
 
@@ -263,7 +263,7 @@ abstract class _RepositoryListState implements RepositoryListState {
       _$RepositoryListStateImpl.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get repositoryName;
   @override
@@ -271,7 +271,7 @@ abstract class _RepositoryListState implements RepositoryListState {
   @override
   String get ownerImageUri;
   @override
-  int get starCount;
+  String get starsCount;
   @override
   String get updatedAt;
   @override

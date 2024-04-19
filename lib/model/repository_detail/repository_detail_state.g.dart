@@ -9,14 +9,13 @@ part of 'repository_detail_state.dart';
 _$RepositoryDetailStateImpl _$$RepositoryDetailStateImplFromJson(
         Map<String, dynamic> json) =>
     _$RepositoryDetailStateImpl(
-      id: json['id'] as int,
       repositoryName: json['repositoryName'] as String,
       ownerName: json['ownerName'] as String,
       ownerImageUri: json['ownerImageUri'] as String,
-      starsCount: json['starsCount'] as int,
-      watchersCount: json['watchersCount'] as int,
-      forksCount: json['forksCount'] as int,
-      issuesCount: json['issuesCount'] as int,
+      starsCount: json['starsCount'] as String,
+      watchersCount: json['watchersCount'] as String,
+      forksCount: json['forksCount'] as String,
+      issuesCount: json['issuesCount'] as String,
       language: json['language'] as String,
       description: json['description'] as String,
       repositoryUrl: json['repositoryUrl'] as String,
@@ -26,7 +25,6 @@ _$RepositoryDetailStateImpl _$$RepositoryDetailStateImplFromJson(
 Map<String, dynamic> _$$RepositoryDetailStateImplToJson(
         _$RepositoryDetailStateImpl instance) =>
     <String, dynamic>{
-      'id': instance.id,
       'repositoryName': instance.repositoryName,
       'ownerName': instance.ownerName,
       'ownerImageUri': instance.ownerImageUri,

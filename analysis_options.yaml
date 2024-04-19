@@ -9,5 +9,6 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+    - "**/*.graphql.dart"
   plugins:
     - custom_lint

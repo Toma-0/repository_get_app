@@ -2,14 +2,13 @@ import 'package:repository_get_app/model/repository_detail/repository_detail_sta
 
 class FakesRepositoryDetail {
   final RepositoryDetailState repositoryDetail = const RepositoryDetailState(
-    id: 1,
     repositoryName: 'Example Repository',
     ownerName: 'Example Owner',
     ownerImageUri: 'https://fromtheasia.com/wp-content/uploads/NCG168.jpg',
-    starsCount: 100,
-    watchersCount: 50,
-    forksCount: 30,
-    issuesCount: 40,
+    starsCount: '100',
+    watchersCount: '50',
+    forksCount: '30',
+    issuesCount: '40',
     language: 'Dart',
     description: 'This is an example repository.',
     repositoryUrl: 'https://github.com/example/example-repo',

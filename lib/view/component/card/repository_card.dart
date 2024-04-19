@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
-import 'package:intl/intl.dart';
 import 'package:repository_get_app/model/repository_list/repository_list_state.dart';
+import 'package:repository_get_app/view/component/show_info_widget/show_owner_image_widget.dart';
+import 'package:repository_get_app/view/component/show_info_widget/show_owner_name_widget.dart';
+import 'package:repository_get_app/view/component/show_info_widget/show_stars_count_widget.dart';
+import 'package:repository_get_app/view/component/show_info_widget/show_update_at_widget.dart';
+import 'package:repository_get_app/view_model/home/home_screen_notifier.dart';
 import 'package:repository_get_app/view_model/size/size_notifier.dart';
 
 class RepositoryListCard extends ConsumerWidget {
@@ -14,15 +18,6 @@ class RepositoryListCard extends ConsumerWidget {
     final ratioWidth = ref.watch(SizeNotifierProvider(context)).ratioSizeWidth;
     final ratioHeight = ref.watch(SizeNotifierProvider(context)).ratioSizeHight;
 
-    final inputFormat = DateFormat('yyyy-MM-ddTHH:mm:ssZ');
-    final outputFormat = DateFormat('yyyy/MM/dd');
-
-    String date(String updatedAt) {
-      return outputFormat.format(
-        inputFormat.parse(updatedAt),
-      );
-    }
-
     return Card(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -31,18 +26,9 @@ class RepositoryListCard extends ConsumerWidget {
         ),
         child: Row(
           children: [
-            Container(
-              width: ratioWidth * 15,
-              height: ratioWidth * 15,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(
-                    repositoryListState.ownerImageUri,
-                  ),
-                ),
-              ),
+            ShowOwnerImageCircleWidget(
+              ownerImageUri: repositoryListState.ownerImageUri,
+              sizeCircle: 15,
             ),
             Expanded(
               child: Padding(
@@ -65,54 +51,23 @@ class RepositoryListCard extends ConsumerWidget {
                     Row(
                       children: [
                         Expanded(
-                          child: RichText(
-                            text: TextSpan(
-                              children: [
-                                const WidgetSpan(
-                                  child: Icon(
-                                    Icons.update,
-                                    size: 14,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: date(repositoryListState.updatedAt),
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                                WidgetSpan(
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.only(left: ratioWidth * 2),
-                                    child: const Icon(
-                                      Icons.person_2_outlined,
-                                      size: 14,
-                                    ),
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: repositoryListState.ownerName,
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                              ],
-                            ),
-                            overflow: TextOverflow.ellipsis,
+                          child: Row(
+                            children: [
+                              ShowUpdataAtWidget(
+                                updatedAt: ref
+                                    .watch(homeScreenNotifierProvider.notifier)
+                                    .formatDate(repositoryListState.updatedAt),
+                              ),
+                              ShowOwnerNameWidget(
+                                ownerName: repositoryListState.ownerName,
+                              ),
+                            ],
                           ),
                         ),
                         Align(
                           alignment: Alignment.bottomRight,
-                          child: RichText(
-                            text: TextSpan(
-                              children: [
-                                const WidgetSpan(
-                                  child: Icon(Icons.star, size: 14),
-                                ),
-                                TextSpan(
-                                  text:
-                                      repositoryListState.starCount.toString(),
-                                  style: Theme.of(context).textTheme.labelSmall,
-                                  spellOut: false,
-                                ),
-                              ],
-                            ),
+                          child: ShowStarsCountWidget(
+                            starsCount: repositoryListState.starsCount,
                           ),
                         ),
                       ],

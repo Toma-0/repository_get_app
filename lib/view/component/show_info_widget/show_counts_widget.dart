@@ -9,7 +9,7 @@ class ShowCountWidget extends StatelessWidget {
   });
   final String label;
   final IconData icon;
-  final int count;
+  final String count;
 
   @override
   Widget build(BuildContext context) {

@@ -23,7 +23,11 @@ class I10n {
   String get labelStars => 'stars';
   String get labelWatching => 'watching';
   String get labelForks => 'forks';
-  String get labelIssues => 'forks';
+  String get labelIssues => 'Issues';
+  String get labelStartSearch => 'Let the search begin! ';
+  String get labelMoreSearch => 'Explore further';
+  String get labelOpenRepository => 'Open Repository';
+  String get labelCommunicationFaild => 'Communication failed';
 
   //message:説明等に使用されるテキスト
   String get messageSelectColorThemeMode => 'Please select a color theme';
@@ -31,4 +35,6 @@ class I10n {
       'Please try searching again using the following method\n1.Change the search words\n2.Make sure there are no misspellings';
   String get messageWaitMoment =>
       'Please wait a moment and try searching again.';
+  String get messageStartSearch =>
+      'Start your search by clicking on the search icon in the upper right corner.';
 }

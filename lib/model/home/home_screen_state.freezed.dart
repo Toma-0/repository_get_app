@@ -18,6 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeScreenState {
   bool get toggleShowSearchFieldWidgets => throw _privateConstructorUsedError;
   ThemeMode get colorThemeMode => throw _privateConstructorUsedError;
+  String get serchWords => throw _privateConstructorUsedError;
+  int get itemCount => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeScreenStateCopyWith<HomeScreenState> get copyWith =>
@@ -30,7 +32,11 @@ abstract class $HomeScreenStateCopyWith<$Res> {
           HomeScreenState value, $Res Function(HomeScreenState) then) =
       _$HomeScreenStateCopyWithImpl<$Res, HomeScreenState>;
   @useResult
-  $Res call({bool toggleShowSearchFieldWidgets, ThemeMode colorThemeMode});
+  $Res call(
+      {bool toggleShowSearchFieldWidgets,
+      ThemeMode colorThemeMode,
+      String serchWords,
+      int itemCount});
 }
 
 /// @nodoc
@@ -48,6 +54,8 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
   $Res call({
     Object? toggleShowSearchFieldWidgets = null,
     Object? colorThemeMode = null,
+    Object? serchWords = null,
+    Object? itemCount = null,
   }) {
     return _then(_value.copyWith(
       toggleShowSearchFieldWidgets: null == toggleShowSearchFieldWidgets
@@ -58,6 +66,14 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
           ? _value.colorThemeMode
           : colorThemeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
+      serchWords: null == serchWords
+          ? _value.serchWords
+          : serchWords // ignore: cast_nullable_to_non_nullable
+              as String,
+      itemCount: null == itemCount
+          ? _value.itemCount
+          : itemCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -70,7 +86,11 @@ abstract class _$$CreateImplCopyWith<$Res>
       __$$CreateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool toggleShowSearchFieldWidgets, ThemeMode colorThemeMode});
+  $Res call(
+      {bool toggleShowSearchFieldWidgets,
+      ThemeMode colorThemeMode,
+      String serchWords,
+      int itemCount});
 }
 
 /// @nodoc
@@ -86,6 +106,8 @@ class __$$CreateImplCopyWithImpl<$Res>
   $Res call({
     Object? toggleShowSearchFieldWidgets = null,
     Object? colorThemeMode = null,
+    Object? serchWords = null,
+    Object? itemCount = null,
   }) {
     return _then(_$CreateImpl(
       toggleShowSearchFieldWidgets: null == toggleShowSearchFieldWidgets
@@ -96,6 +118,14 @@ class __$$CreateImplCopyWithImpl<$Res>
           ? _value.colorThemeMode
           : colorThemeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
+      serchWords: null == serchWords
+          ? _value.serchWords
+          : serchWords // ignore: cast_nullable_to_non_nullable
+              as String,
+      itemCount: null == itemCount
+          ? _value.itemCount
+          : itemCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -105,7 +135,9 @@ class __$$CreateImplCopyWithImpl<$Res>
 class _$CreateImpl implements _Create {
   _$CreateImpl(
       {this.toggleShowSearchFieldWidgets = false,
-      this.colorThemeMode = ThemeMode.system});
+      this.colorThemeMode = ThemeMode.system,
+      this.serchWords = '',
+      this.itemCount = 10});
 
   @override
   @JsonKey()
@@ -113,10 +145,16 @@ class _$CreateImpl implements _Create {
   @override
   @JsonKey()
   final ThemeMode colorThemeMode;
+  @override
+  @JsonKey()
+  final String serchWords;
+  @override
+  @JsonKey()
+  final int itemCount;
 
   @override
   String toString() {
-    return 'HomeScreenState(toggleShowSearchFieldWidgets: $toggleShowSearchFieldWidgets, colorThemeMode: $colorThemeMode)';
+    return 'HomeScreenState(toggleShowSearchFieldWidgets: $toggleShowSearchFieldWidgets, colorThemeMode: $colorThemeMode, serchWords: $serchWords, itemCount: $itemCount)';
   }
 
   @override
@@ -129,12 +167,16 @@ class _$CreateImpl implements _Create {
                 other.toggleShowSearchFieldWidgets ==
                     toggleShowSearchFieldWidgets) &&
             (identical(other.colorThemeMode, colorThemeMode) ||
-                other.colorThemeMode == colorThemeMode));
+                other.colorThemeMode == colorThemeMode) &&
+            (identical(other.serchWords, serchWords) ||
+                other.serchWords == serchWords) &&
+            (identical(other.itemCount, itemCount) ||
+                other.itemCount == itemCount));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, toggleShowSearchFieldWidgets, colorThemeMode);
+  int get hashCode => Object.hash(runtimeType, toggleShowSearchFieldWidgets,
+      colorThemeMode, serchWords, itemCount);
 
   @JsonKey(ignore: true)
   @override
@@ -146,12 +188,18 @@ class _$CreateImpl implements _Create {
 abstract class _Create implements HomeScreenState {
   factory _Create(
       {final bool toggleShowSearchFieldWidgets,
-      final ThemeMode colorThemeMode}) = _$CreateImpl;
+      final ThemeMode colorThemeMode,
+      final String serchWords,
+      final int itemCount}) = _$CreateImpl;
 
   @override
   bool get toggleShowSearchFieldWidgets;
   @override
   ThemeMode get colorThemeMode;
+  @override
+  String get serchWords;
+  @override
+  int get itemCount;
   @override
   @JsonKey(ignore: true)
   _$$CreateImplCopyWith<_$CreateImpl> get copyWith =>
