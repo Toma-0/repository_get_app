@@ -5,7 +5,7 @@ import 'package:repository_get_app/model/repository_detail/repository_detail_sta
 import 'package:repository_get_app/view_model/api/graphql_client/graphql_client.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'campaign_detail_repository.g.dart';
+part 'repository_detail_notifier.g.dart';
 
 @riverpod
 Future<RepositoryDetailState> fetchRepositoryDetail(

@@ -2,16 +2,18 @@
 
 import 'package:repository_get_app/graphql/query_serch_repo.graphql.dart';
 import 'package:repository_get_app/model/repository_list/repository_list_state.dart';
+import 'package:repository_get_app/model/repository_list_notifier/repository_list_notifier_state.dart';
 import 'package:repository_get_app/view_model/api/graphql_client/graphql_client.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'campaign_list_repository.g.dart';
+part 'repository_list_notifier.g.dart';
 
 @riverpod
-Future<List<RepositoryListState>> fetchRepositoryList(
+Future<RepositoryListNotifierState> fetchRepositoryList(
   FetchRepositoryListRef ref,
   String query,
   int first,
+  String? after,
 ) async {
   // Fakesクラスで作成したusersリストが返ってくる。
 
@@ -21,12 +23,16 @@ Future<List<RepositoryListState>> fetchRepositoryList(
               variables: Variables$Query$SearchRepoInfo(
                 query: query,
                 first: first,
+                after: after ?? '',
               ),
             ),
           );
 
   final repositoryListStateList = <RepositoryListState>[];
+  late var cursor = '';
+
   repository.parsedData?.search.edges?.forEach((element) {
+    cursor = element!.cursor.toString();
     final node = element!.node!.toJson();
     repositoryListStateList.add(
       RepositoryListState(
@@ -40,5 +46,9 @@ Future<List<RepositoryListState>> fetchRepositoryList(
       ),
     );
   });
-  return Future.value(repositoryListStateList);
+
+  return Future.value(
+    RepositoryListNotifierState(
+        cursor: cursor, repositoryListState: repositoryListStateList),
+  );
 }

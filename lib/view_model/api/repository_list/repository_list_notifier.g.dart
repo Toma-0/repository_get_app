@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'campaign_list_repository.dart';
+part of 'repository_list_notifier.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
 String _$fetchRepositoryListHash() =>
-    r'b108735b7012c197dd09862334435c1ddb8f4328';
+    r'eec658cb8b1dbcf143f4a91e8776973cf50588de';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -36,7 +36,7 @@ const fetchRepositoryListProvider = FetchRepositoryListFamily();
 
 /// See also [fetchRepositoryList].
 class FetchRepositoryListFamily
-    extends Family<AsyncValue<List<RepositoryListState>>> {
+    extends Family<AsyncValue<RepositoryListNotifierState>> {
   /// See also [fetchRepositoryList].
   const FetchRepositoryListFamily();
 
@@ -44,10 +44,12 @@ class FetchRepositoryListFamily
   FetchRepositoryListProvider call(
     String query,
     int first,
+    String? after,
   ) {
     return FetchRepositoryListProvider(
       query,
       first,
+      after,
     );
   }
 
@@ -58,6 +60,7 @@ class FetchRepositoryListFamily
     return call(
       provider.query,
       provider.first,
+      provider.after,
     );
   }
 
@@ -78,16 +81,18 @@ class FetchRepositoryListFamily
 
 /// See also [fetchRepositoryList].
 class FetchRepositoryListProvider
-    extends AutoDisposeFutureProvider<List<RepositoryListState>> {
+    extends AutoDisposeFutureProvider<RepositoryListNotifierState> {
   /// See also [fetchRepositoryList].
   FetchRepositoryListProvider(
     String query,
     int first,
+    String? after,
   ) : this._internal(
           (ref) => fetchRepositoryList(
             ref as FetchRepositoryListRef,
             query,
             first,
+            after,
           ),
           from: fetchRepositoryListProvider,
           name: r'fetchRepositoryListProvider',
@@ -100,6 +105,7 @@ class FetchRepositoryListProvider
               FetchRepositoryListFamily._allTransitiveDependencies,
           query: query,
           first: first,
+          after: after,
         );
 
   FetchRepositoryListProvider._internal(
@@ -111,14 +117,16 @@ class FetchRepositoryListProvider
     required super.from,
     required this.query,
     required this.first,
+    required this.after,
   }) : super.internal();
 
   final String query;
   final int first;
+  final String? after;
 
   @override
   Override overrideWith(
-    FutureOr<List<RepositoryListState>> Function(
+    FutureOr<RepositoryListNotifierState> Function(
             FetchRepositoryListRef provider)
         create,
   ) {
@@ -133,12 +141,14 @@ class FetchRepositoryListProvider
         debugGetCreateSourceHash: null,
         query: query,
         first: first,
+        after: after,
       ),
     );
   }
 
   @override
-  AutoDisposeFutureProviderElement<List<RepositoryListState>> createElement() {
+  AutoDisposeFutureProviderElement<RepositoryListNotifierState>
+      createElement() {
     return _FetchRepositoryListProviderElement(this);
   }
 
@@ -146,7 +156,8 @@ class FetchRepositoryListProvider
   bool operator ==(Object other) {
     return other is FetchRepositoryListProvider &&
         other.query == query &&
-        other.first == first;
+        other.first == first &&
+        other.after == after;
   }
 
   @override
@@ -154,22 +165,26 @@ class FetchRepositoryListProvider
     var hash = _SystemHash.combine(0, runtimeType.hashCode);
     hash = _SystemHash.combine(hash, query.hashCode);
     hash = _SystemHash.combine(hash, first.hashCode);
+    hash = _SystemHash.combine(hash, after.hashCode);
 
     return _SystemHash.finish(hash);
   }
 }
 
 mixin FetchRepositoryListRef
-    on AutoDisposeFutureProviderRef<List<RepositoryListState>> {
+    on AutoDisposeFutureProviderRef<RepositoryListNotifierState> {
   /// The parameter `query` of this provider.
   String get query;
 
   /// The parameter `first` of this provider.
   int get first;
+
+  /// The parameter `after` of this provider.
+  String? get after;
 }
 
 class _FetchRepositoryListProviderElement
-    extends AutoDisposeFutureProviderElement<List<RepositoryListState>>
+    extends AutoDisposeFutureProviderElement<RepositoryListNotifierState>
     with FetchRepositoryListRef {
   _FetchRepositoryListProviderElement(super.provider);
 
@@ -177,6 +192,8 @@ class _FetchRepositoryListProviderElement
   String get query => (origin as FetchRepositoryListProvider).query;
   @override
   int get first => (origin as FetchRepositoryListProvider).first;
+  @override
+  String? get after => (origin as FetchRepositoryListProvider).after;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

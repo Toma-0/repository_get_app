@@ -27,6 +27,11 @@ class HomeScreenNotifier extends _$HomeScreenNotifier {
   void changeColorThemeSystem() =>
       state = state.copyWith(colorThemeMode: ThemeMode.system);
 
+  void addSearchItemCount() =>
+      state = state.copyWith(itemCount: state.itemCount + 10);
+
+  void initStateSearchList() => state = state.copyWith(itemCount: 10);
+
   // TODO(Toma-0): contextをインポートしなくてもよい方法を考える
   // ignore: avoid_build_context_in_providers
   String currentColorTheme(BuildContext context) {
