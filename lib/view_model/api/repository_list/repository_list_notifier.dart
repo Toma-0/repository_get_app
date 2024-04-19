@@ -16,41 +16,58 @@ Future<RepositoryListNotifierState> fetchRepositoryList(
   String? after,
 ) async {
   // Fakesクラスで作成したusersリストが返ってくる。
-
-  final repository =
-      await ref.watch(graphQLClientProvider).query$SearchRepoInfo(
-            Options$Query$SearchRepoInfo(
-              variables: Variables$Query$SearchRepoInfo(
-                query: query,
-                first: first,
-                after: after ?? '',
+  try {
+    final repository =
+        await ref.watch(graphQLClientProvider).query$SearchRepoInfo(
+              Options$Query$SearchRepoInfo(
+                variables: Variables$Query$SearchRepoInfo(
+                  query: query,
+                  first: first,
+                  after: after ?? '',
+                ),
               ),
+            );
+
+    if (repository.exception != null) {
+      throw Exception(repository.exception);
+    }
+
+    final repositoryListStateList = <RepositoryListState>[];
+    late var cursor = '';
+
+    repository.parsedData?.search.edges?.forEach((element) {
+      final elementGraphql = element;
+      if (elementGraphql != null) {
+        final nodeGraphql = elementGraphql.node;
+        if (nodeGraphql != null) {
+          cursor = elementGraphql.cursor;
+          final node = nodeGraphql.toJson();
+          repositoryListStateList.add(
+            RepositoryListState(
+              id: node['id'].toString(),
+              repositoryName: node['name'].toString(),
+              starCount: node['stargazerCount'].toString(),
+              updatedAt: node['updatedAt'].toString(),
+              description: node['description'].toString(),
+              ownerName: node['owner']['login'].toString(),
+              ownerImageUri: node['owner']['avatarUrl'].toString(),
             ),
           );
+        } else {
+          throw Exception(repository.exception);
+        }
+      } else {
+        throw Exception('Query_SearchRepoInfo_search_edges is null');
+      }
+    });
 
-  final repositoryListStateList = <RepositoryListState>[];
-  late var cursor = '';
-
-  repository.parsedData?.search.edges?.forEach((element) {
-    cursor = element!.cursor;
-    final node = element!.node!.toJson();
-    repositoryListStateList.add(
-      RepositoryListState(
-        id: node['id'].toString(),
-        repositoryName: node['name'].toString(),
-        starCount: node['stargazerCount'].toString(),
-        updatedAt: node['updatedAt'].toString(),
-        description: node['description'].toString(),
-        ownerName: node['owner']['login'].toString(),
-        ownerImageUri: node['owner']['avatarUrl'].toString(),
+    return Future.value(
+      RepositoryListNotifierState(
+        cursor: cursor,
+        repositoryListState: repositoryListStateList,
       ),
     );
-  });
-
-  return Future.value(
-    RepositoryListNotifierState(
-      cursor: cursor,
-      repositoryListState: repositoryListStateList,
-    ),
-  );
+  } on Exception catch (e) {
+    return Future.error(e);
+  }
 }
