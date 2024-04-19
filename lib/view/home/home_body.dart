@@ -7,8 +7,6 @@ class HomeBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final height = ref.watch(SizeNotifierProvider(context)).ratioSizeHight;
-    final width = ref.watch(SizeNotifierProvider(context)).ratioSizeWidth;
     return RefreshIndicator(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -30,32 +28,14 @@ class HomeBody extends ConsumerWidget {
                     return ListView(
                       dragStartBehavior: DragStartBehavior.down,
                       children: [
-                        Align(
-                          child: SizedBox(
-                            height: height * 70,
-                            child: Column(
-                              children: [
-                                Gap(height * 20),
-                                SizedBox(
-                                  height: width * 40,
-                                  child: Image.asset(
-                                    'assets/image/start_search_girl.png',
-                                  ),
-                                ),
-                                Text(
-                                  '右上の検索アイコンから検索を開始しましょう',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodySmall!
-                                      .apply(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondary,
-                                      ),
-                                ),
-                              ],
-                            ),
-                          ),
+                        ShowContextWithImage(
+                          imageAssetsUri: 'assets/image/start_search_girl.png',
+                          title:
+                              AppLocalizations.of(context)?.labelStartSearch ??
+                                  I10n().labelStartSearch,
+                          message: AppLocalizations.of(context)
+                                  ?.messageStartSearch ??
+                              I10n().messageStartSearch,
                         ),
                       ],
                     );
@@ -63,48 +43,14 @@ class HomeBody extends ConsumerWidget {
                   return ListView(
                     dragStartBehavior: DragStartBehavior.down,
                     children: [
-                      Align(
-                        child: SizedBox(
-                          height: height * 70,
-                          child: Column(
-                            children: [
-                              Gap(height * 17),
-                              SizedBox(
-                                height: width * 40,
-                                child: Image.asset(
-                                  'assets/image/not_found_girl.png',
-                                ),
-                              ),
-                              Text(
-                                AppLocalizations.of(context)
-                                        ?.labelRepositoryNotFound ??
-                                    I10n().labelRepositoryNotFound,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .labelLarge!
-                                    .apply(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondary,
-                                    ),
-                              ),
-                              Gap(height * 2),
-                              Text(
-                                AppLocalizations.of(context)
-                                        ?.messageSearchingAgain ??
-                                    I10n().messageSearchingAgain,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall!
-                                    .apply(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondary,
-                                    ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      ShowContextWithImage(
+                        imageAssetsUri: 'assets/image/not_found_girl.png',
+                        title: AppLocalizations.of(context)
+                                ?.labelRepositoryNotFound ??
+                            I10n().labelRepositoryNotFound,
+                        message: AppLocalizations.of(context)
+                                ?.messageSearchingAgain ??
+                            I10n().messageSearchingAgain,
                       ),
                     ],
                   );
@@ -144,45 +90,12 @@ class HomeBody extends ConsumerWidget {
                 return ListView(
                   dragStartBehavior: DragStartBehavior.down,
                   children: [
-                    Align(
-                      child: SizedBox(
-                        height: height * 70,
-                        child: Column(
-                          children: [
-                            Gap(height * 17),
-                            SizedBox(
-                              height: width * 40,
-                              child: Image.asset(
-                                'assets/image/error_girl.png',
-                              ),
-                            ),
-                            Text(
-                              AppLocalizations.of(context)
-                                      ?.labelErrorOccurred ??
-                                  I10n().labelErrorOccurred,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelLarge!
-                                  .apply(
-                                    color:
-                                        Theme.of(context).colorScheme.secondary,
-                                  ),
-                            ),
-                            Gap(height * 2),
-                            Text(
-                              AppLocalizations.of(context)?.messageWaitMomen ??
-                                  I10n().messageWaitMoment,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodySmall!
-                                  .apply(
-                                    color:
-                                        Theme.of(context).colorScheme.secondary,
-                                  ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    ShowContextWithImage(
+                      imageAssetsUri: 'assets/image/error_girl.png',
+                      title: AppLocalizations.of(context)?.labelErrorOccurred ??
+                          I10n().labelErrorOccurred,
+                      message: AppLocalizations.of(context)?.messageWaitMomen ??
+                          I10n().messageWaitMoment,
                     ),
                   ],
                 );
