@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
-import 'package:intl/intl.dart';
 import 'package:repository_get_app/model/repository_list/repository_list_state.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_owner_image_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_owner_name_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_stars_count_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_update_at_widget.dart';
+import 'package:repository_get_app/view_model/home/home_screen_notifier.dart';
 import 'package:repository_get_app/view_model/size/size_notifier.dart';
 
 class RepositoryListCard extends ConsumerWidget {
@@ -17,15 +17,6 @@ class RepositoryListCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final ratioWidth = ref.watch(SizeNotifierProvider(context)).ratioSizeWidth;
     final ratioHeight = ref.watch(SizeNotifierProvider(context)).ratioSizeHight;
-
-    final inputFormat = DateFormat('yyyy-MM-ddTHH:mm:ssZ');
-    final outputFormat = DateFormat('yyyy/MM/dd');
-
-    String date(String updatedAt) {
-      return outputFormat.format(
-        inputFormat.parse(updatedAt),
-      );
-    }
 
     return Card(
       child: Padding(
@@ -63,7 +54,9 @@ class RepositoryListCard extends ConsumerWidget {
                           child: Row(
                             children: [
                               ShowUpdataAtWidget(
-                                updatedAt: repositoryListState.updatedAt,
+                                updatedAt: ref
+                                    .watch(homeScreenNotifierProvider.notifier)
+                                    .formatDate(repositoryListState.updatedAt),
                               ),
                               ShowOwnerNameWidget(
                                 ownerName: repositoryListState.ownerName,

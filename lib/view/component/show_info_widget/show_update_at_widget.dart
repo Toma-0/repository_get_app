@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class ShowUpdataAtWidget extends StatelessWidget {
   const ShowUpdataAtWidget({super.key, required this.updatedAt});
@@ -7,15 +6,6 @@ class ShowUpdataAtWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final inputFormat = DateFormat('yyyy-MM-ddTHH:mm:ssZ');
-    final outputFormat = DateFormat('yyyy/MM/dd');
-
-    String date(String updatedAt) {
-      return outputFormat.format(
-        inputFormat.parse(updatedAt),
-      );
-    }
-
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
@@ -27,7 +17,7 @@ class ShowUpdataAtWidget extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: date(updatedAt),
+            text: updatedAt,
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ],

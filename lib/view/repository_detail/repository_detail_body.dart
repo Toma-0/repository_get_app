@@ -17,7 +17,9 @@ class RepositoryDetailBody extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             ShowUpdataAtWidget(
-              updatedAt: data.updatedAt,
+              updatedAt: ref
+                  .watch(homeScreenNotifierProvider.notifier)
+                  .formatDate(data.updatedAt),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
