@@ -1,8 +1,9 @@
 
-query SearchRepoInfo($query:String!,$first:Int!){
+query SearchRepoInfo($query:String!,$first:Int!,$after:String!){
   search(
-    query: $query, type: REPOSITORY, first:$first,
+    query: $query, type: REPOSITORY, first:$first,after:$after
   ){    edges {
+    cursor
       node {
         ... on Repository {
           id

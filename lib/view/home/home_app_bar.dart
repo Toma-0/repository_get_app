@@ -23,22 +23,34 @@ class SearchFieldAppBar extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return AppBar(
       title: TextField(
-        decoration: InputDecoration(
-          icon: const Icon(Icons.search),
-          hintText:
-              AppLocalizations.of(context)?.labelSearch ?? I10n().labelSearch,
-        ),
-        onChanged: (text) => ref
-            .watch(homeScreenNotifierProvider.notifier)
-            .changeSerchWord(text),
-      ),
+          decoration: InputDecoration(
+            icon: const Icon(Icons.search),
+            hintText:
+                AppLocalizations.of(context)?.labelSearch ?? I10n().labelSearch,
+          ),
+          onChanged: (text) {
+            ref
+                .watch(homeScreenNotifierProvider.notifier)
+                .changeSerchWord(text);
+            ref
+                .watch(homeScreenNotifierProvider.notifier)
+                .initStateSearchList();
+          }),
       actions: [
         IconButton(
-          icon: const Icon(Icons.clear),
-          onPressed: () => ref
-              .watch(homeScreenNotifierProvider.notifier)
-              .changeSearchRelated(),
-        ),
+            icon: const Icon(Icons.clear),
+            onPressed: () {
+              ref
+                  .watch(homeScreenNotifierProvider.notifier)
+                  .changeSerchWord('');
+              ref
+                  .watch(homeScreenNotifierProvider.notifier)
+                  .initStateSearchList();
+
+              ref
+                  .watch(homeScreenNotifierProvider.notifier)
+                  .changeSearchRelated();
+            }),
       ],
     );
   }

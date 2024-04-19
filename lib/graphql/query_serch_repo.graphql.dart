@@ -8,10 +8,12 @@ class Variables$Query$SearchRepoInfo {
   factory Variables$Query$SearchRepoInfo({
     required String query,
     required int first,
+    required String after,
   }) =>
       Variables$Query$SearchRepoInfo._({
         r'query': query,
         r'first': first,
+        r'after': after,
       });
 
   Variables$Query$SearchRepoInfo._(this._$data);
@@ -22,6 +24,8 @@ class Variables$Query$SearchRepoInfo {
     result$data['query'] = (l$query as String);
     final l$first = data['first'];
     result$data['first'] = (l$first as int);
+    final l$after = data['after'];
+    result$data['after'] = (l$after as String);
     return Variables$Query$SearchRepoInfo._(result$data);
   }
 
@@ -31,12 +35,16 @@ class Variables$Query$SearchRepoInfo {
 
   int get first => (_$data['first'] as int);
 
+  String get after => (_$data['after'] as String);
+
   Map<String, dynamic> toJson() {
     final result$data = <String, dynamic>{};
     final l$query = query;
     result$data['query'] = l$query;
     final l$first = first;
     result$data['first'] = l$first;
+    final l$after = after;
+    result$data['after'] = l$after;
     return result$data;
   }
 
@@ -65,6 +73,11 @@ class Variables$Query$SearchRepoInfo {
     if (l$first != lOther$first) {
       return false;
     }
+    final l$after = after;
+    final lOther$after = other.after;
+    if (l$after != lOther$after) {
+      return false;
+    }
     return true;
   }
 
@@ -72,9 +85,11 @@ class Variables$Query$SearchRepoInfo {
   int get hashCode {
     final l$query = query;
     final l$first = first;
+    final l$after = after;
     return Object.hashAll([
       l$query,
       l$first,
+      l$after,
     ]);
   }
 }
@@ -91,6 +106,7 @@ abstract class CopyWith$Variables$Query$SearchRepoInfo<TRes> {
   TRes call({
     String? query,
     int? first,
+    String? after,
   });
 }
 
@@ -110,11 +126,13 @@ class _CopyWithImpl$Variables$Query$SearchRepoInfo<TRes>
   TRes call({
     Object? query = _undefined,
     Object? first = _undefined,
+    Object? after = _undefined,
   }) =>
       _then(Variables$Query$SearchRepoInfo._({
         ..._instance._$data,
         if (query != _undefined && query != null) 'query': (query as String),
         if (first != _undefined && first != null) 'first': (first as int),
+        if (after != _undefined && after != null) 'after': (after as String),
       }));
 }
 
@@ -127,6 +145,7 @@ class _CopyWithStubImpl$Variables$Query$SearchRepoInfo<TRes>
   call({
     String? query,
     int? first,
+    String? after,
   }) =>
       _res;
 }
@@ -288,6 +307,15 @@ const documentNodeQuerySearchRepoInfo = DocumentNode(definitions: [
         defaultValue: DefaultValueNode(value: null),
         directives: [],
       ),
+      VariableDefinitionNode(
+        variable: VariableNode(name: NameNode(value: 'after')),
+        type: NamedTypeNode(
+          name: NameNode(value: 'String'),
+          isNonNull: true,
+        ),
+        defaultValue: DefaultValueNode(value: null),
+        directives: [],
+      ),
     ],
     directives: [],
     selectionSet: SelectionSetNode(selections: [
@@ -307,6 +335,10 @@ const documentNodeQuerySearchRepoInfo = DocumentNode(definitions: [
             name: NameNode(value: 'first'),
             value: VariableNode(name: NameNode(value: 'first')),
           ),
+          ArgumentNode(
+            name: NameNode(value: 'after'),
+            value: VariableNode(name: NameNode(value: 'after')),
+          ),
         ],
         directives: [],
         selectionSet: SelectionSetNode(selections: [
@@ -316,6 +348,13 @@ const documentNodeQuerySearchRepoInfo = DocumentNode(definitions: [
             arguments: [],
             directives: [],
             selectionSet: SelectionSetNode(selections: [
+              FieldNode(
+                name: NameNode(value: 'cursor'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null,
+              ),
               FieldNode(
                 name: NameNode(value: 'node'),
                 alias: null,
@@ -763,15 +802,18 @@ class _CopyWithStubImpl$Query$SearchRepoInfo$search<TRes>
 
 class Query$SearchRepoInfo$search$edges {
   Query$SearchRepoInfo$search$edges({
+    required this.cursor,
     this.node,
     this.$__typename = 'SearchResultItemEdge',
   });
 
   factory Query$SearchRepoInfo$search$edges.fromJson(
       Map<String, dynamic> json) {
+    final l$cursor = json['cursor'];
     final l$node = json['node'];
     final l$$__typename = json['__typename'];
     return Query$SearchRepoInfo$search$edges(
+      cursor: (l$cursor as String),
       node: l$node == null
           ? null
           : Query$SearchRepoInfo$search$edges$node.fromJson(
@@ -780,12 +822,16 @@ class Query$SearchRepoInfo$search$edges {
     );
   }
 
+  final String cursor;
+
   final Query$SearchRepoInfo$search$edges$node? node;
 
   final String $__typename;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$cursor = cursor;
+    _resultData['cursor'] = l$cursor;
     final l$node = node;
     _resultData['node'] = l$node?.toJson();
     final l$$__typename = $__typename;
@@ -795,9 +841,11 @@ class Query$SearchRepoInfo$search$edges {
 
   @override
   int get hashCode {
+    final l$cursor = cursor;
     final l$node = node;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$cursor,
       l$node,
       l$$__typename,
     ]);
@@ -810,6 +858,11 @@ class Query$SearchRepoInfo$search$edges {
     }
     if (!(other is Query$SearchRepoInfo$search$edges) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$cursor = cursor;
+    final lOther$cursor = other.cursor;
+    if (l$cursor != lOther$cursor) {
       return false;
     }
     final l$node = node;
@@ -845,6 +898,7 @@ abstract class CopyWith$Query$SearchRepoInfo$search$edges<TRes> {
       _CopyWithStubImpl$Query$SearchRepoInfo$search$edges;
 
   TRes call({
+    String? cursor,
     Query$SearchRepoInfo$search$edges$node? node,
     String? $__typename,
   });
@@ -865,10 +919,14 @@ class _CopyWithImpl$Query$SearchRepoInfo$search$edges<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? cursor = _undefined,
     Object? node = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$SearchRepoInfo$search$edges(
+        cursor: cursor == _undefined || cursor == null
+            ? _instance.cursor
+            : (cursor as String),
         node: node == _undefined
             ? _instance.node
             : (node as Query$SearchRepoInfo$search$edges$node?),
@@ -893,6 +951,7 @@ class _CopyWithStubImpl$Query$SearchRepoInfo$search$edges<TRes>
   TRes _res;
 
   call({
+    String? cursor,
     Query$SearchRepoInfo$search$edges$node? node,
     String? $__typename,
   }) =>

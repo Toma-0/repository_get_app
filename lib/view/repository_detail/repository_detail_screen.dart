@@ -11,7 +11,7 @@ import 'package:repository_get_app/view/component/show_info_widget/show_descript
 import 'package:repository_get_app/view/component/show_info_widget/show_language_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_owner_info_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_update_at_widget.dart';
-import 'package:repository_get_app/view_model/api/campaign_detail/campaign_detail_repository.dart';
+import 'package:repository_get_app/view_model/api/repository_detail/repository_detail_notifier.dart';
 import 'package:repository_get_app/view_model/size/size_notifier.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
