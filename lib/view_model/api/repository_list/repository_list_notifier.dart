@@ -32,7 +32,7 @@ Future<RepositoryListNotifierState> fetchRepositoryList(
   late var cursor = '';
 
   repository.parsedData?.search.edges?.forEach((element) {
-    cursor = element!.cursor.toString();
+    cursor = element!.cursor;
     final node = element!.node!.toJson();
     repositoryListStateList.add(
       RepositoryListState(
@@ -49,6 +49,8 @@ Future<RepositoryListNotifierState> fetchRepositoryList(
 
   return Future.value(
     RepositoryListNotifierState(
-        cursor: cursor, repositoryListState: repositoryListStateList),
+      cursor: cursor,
+      repositoryListState: repositoryListStateList,
+    ),
   );
 }

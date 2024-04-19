@@ -18,9 +18,10 @@ class HomeBody extends ConsumerWidget {
         child: ref
             .watch(
               FetchRepositoryListProvider(
-                  ref.watch(homeScreenNotifierProvider).serchWords,
-                  ref.watch(homeScreenNotifierProvider).itemCount,
-                  ''),
+                ref.watch(homeScreenNotifierProvider).serchWords,
+                ref.watch(homeScreenNotifierProvider).itemCount,
+                '',
+              ),
             )
             .when(
               data: (data) {
@@ -30,7 +31,6 @@ class HomeBody extends ConsumerWidget {
                       dragStartBehavior: DragStartBehavior.down,
                       children: [
                         Align(
-                          alignment: Alignment.center,
                           child: SizedBox(
                             height: height * 70,
                             child: Column(
@@ -64,7 +64,6 @@ class HomeBody extends ConsumerWidget {
                     dragStartBehavior: DragStartBehavior.down,
                     children: [
                       Align(
-                        alignment: Alignment.center,
                         child: SizedBox(
                           height: height * 70,
                           child: Column(
@@ -121,7 +120,7 @@ class HomeBody extends ConsumerWidget {
                               .read(homeScreenNotifierProvider.notifier)
                               .addSearchItemCount();
                         },
-                        child: Text('さらに調べる'),
+                        child: const Text('さらに調べる'),
                       );
                     }
                     return InkWell(
@@ -146,7 +145,6 @@ class HomeBody extends ConsumerWidget {
                   dragStartBehavior: DragStartBehavior.down,
                   children: [
                     Align(
-                      alignment: Alignment.center,
                       child: SizedBox(
                         height: height * 70,
                         child: Column(
