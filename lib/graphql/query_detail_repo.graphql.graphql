@@ -1,0 +1,30 @@
+
+query GetDetailRepository($id:ID!){
+  node(id:$id) {
+    ... on Repository {
+      name
+      stargazerCount
+      forkCount
+      watchers{
+        totalCount
+      }
+      issues{
+        totalCount
+      }
+      updatedAt
+      description
+      url
+      owner {
+        login
+        avatarUrl(size: 100)
+      }
+      languages(
+        first:1
+      ){
+        nodes{
+          name
+        }
+      }
+    }
+  }
+}

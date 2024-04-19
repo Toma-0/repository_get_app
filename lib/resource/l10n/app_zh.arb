@@ -1,0 +1,83 @@
+{
+    "@@locale": "zh",
+    "titleHomeScreen": "Flutter 演示主屏幕",
+    "@titleHomeScreen": {
+        "description": "flutter demo home page"
+    },
+    "labelSearch": "搜索",
+    "@labelSearch": {
+        "description": "search"
+    },
+    "labelThemeModeDark": "黑暗模式",
+    "@labelThemeModeDark": {
+        "description": "dark mode"
+    },
+    "labelThemeModeLight": "浅色模式",
+    "@labelThemeModeLight": {
+        "description": "light mode"
+    },
+    "labelThemeModeSystem": "匹配系统设置",
+    "@labelThemeModeSystem": {
+        "description": "Match theme mode to system settings"
+    },
+    "labelUserInfo": "用户信息",
+    "@labelUserInfo": {
+        "description": "User Github login Information"
+    },
+    "labelLangageJa": "日语",
+    "@labelLangageJa": {
+        "description": "Japanese"
+    },
+    "labelLanguageKo": "韩语",
+    "@labelLanguageKo": {
+        "description": "Korean"
+    },
+    "labelLanguageZh": "中文",
+    "@labelLanguageZh": {
+        "description": "Chinese"
+    },
+    "labelLanguageEn": "英语",
+    "@labelLanguageEn": {
+        "description": "English"
+    },
+    "labelRepositoryNotFound": "未找到存储库",
+    "@labelRepositoryNotFound": {
+        "description": "Search results Repositories not found"
+    },
+    "labelErrorOccurred": "出现错误",
+    "@labelErrorOccurred": {
+        "description": "Some error occurred during the search."
+    },
+    "labelStartSearch": "开始搜索",
+    "@labelStartSearch": {
+        "description": "Nothing has been entered in the search form"
+    },
+    "labelMoreSearch": "了解更多",
+    "@labelMoreSearch": {
+        "description": "Serch more repository"
+    },
+    "labelOpenRepository": "开放资源库",
+    "@labelOpenRepository": {
+        "description": "Jump to the Github repository page"
+    },
+    "labelCommunicationFaild": "发生通信错误",
+    "@labelCommunicationFaild": {
+        "description": "Indicates that an error occurred during api communication"
+    },
+    "messageSelectColorThemeMode": "请选择颜色主题",
+    "@messageSelectColorThemeMode": {
+        "description": "Change the color theme of the screen"
+    },
+    "messageSearchingAgain": "请尝试使用以下方法重新搜索\n\n1.更改搜索字词\n2.确保没有拼写错误",
+    "@messageSearchingAgain": {
+        "description": "Hints about the search that appear when the repository is not found"
+    },
+    "messageWaitMomen": "请稍等片刻，然后重新搜索",
+    "@messageWaitMomen": {
+        "description": "Hints to display when errors occur"
+    },
+    "messageStartSearch": "点击右上角的搜索图标开始搜索",
+    "@messageStartSearch": {
+        "description": "Hint to be displayed when nothing is entered in the search form"
+    }
+}

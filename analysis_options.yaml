@@ -4,3 +4,11 @@ linter:
   rules:
     - cast_nullable_to_non_nullable
     - always_use_package_imports
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.graphql.dart"
+  plugins:
+    - custom_lint
