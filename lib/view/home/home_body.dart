@@ -76,26 +76,11 @@ class HomeBody extends ConsumerWidget {
                       child: RepositoryListCard(
                         repositoryListState: data.repositoryListState[index],
                       ),
-                      onTap: () async {
-                        await Navigator.of(context).push(
-                          PageRouteBuilder<Scaffold>(
-                            pageBuilder:
-                                (context, animation, secondaryAnimation) {
-                              return RepositoryDetailScreen(
-                                id: data.repositoryListState[index].id,
-                              );
-                            },
-                            transitionsBuilder: (
-                              context,
-                              animation,
-                              secondaryAnimation,
-                              child,
-                            ) =>
-                                ref.read(
-                              PushPageTransitionAnimationProvider(
-                                animation,
-                                child,
-                              ),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<Scaffold>(
+                            builder: (context) => RepositoryDetailScreen(
+                              id: data.repositoryListState[index].id,
                             ),
                           ),
                         );
