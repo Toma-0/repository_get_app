@@ -20,6 +20,9 @@ _$RepositoryDetailStateImpl _$$RepositoryDetailStateImplFromJson(
       description: json['description'] as String,
       repositoryUrl: json['repositoryUrl'] as String,
       updatedAt: json['updatedAt'] as String,
+      issueState: (json['issueState'] as List<dynamic>)
+          .map((e) => IssueState.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$RepositoryDetailStateImplToJson(
@@ -36,4 +39,5 @@ Map<String, dynamic> _$$RepositoryDetailStateImplToJson(
       'description': instance.description,
       'repositoryUrl': instance.repositoryUrl,
       'updatedAt': instance.updatedAt,
+      'issueState': instance.issueState,
     };

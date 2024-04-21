@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_dynamic_calls
 
 import 'package:repository_get_app/graphql/query_detail_repo.graphql.graphql.dart';
+import 'package:repository_get_app/model/repository_detail/issue_state.dart';
 import 'package:repository_get_app/model/repository_detail/repository_detail_state.dart';
 import 'package:repository_get_app/view_model/api/graphql_client/graphql_client.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -15,6 +16,7 @@ Future<RepositoryDetailState> fetchRepositoryDetail(
   String id,
 ) async {
   try {
+    final issueList = <IssueState>[];
     final repository =
         await ref.watch(graphQLClientProvider).query$GetDetailRepository(
               Options$Query$GetDetailRepository(
@@ -28,7 +30,16 @@ Future<RepositoryDetailState> fetchRepositoryDetail(
       if (nodeGraphql != null) {
         final node = nodeGraphql.toJson();
 
-        // Fakesクラスで作成したusersリストが返ってくる。
+        // ignore: inference_failure_on_untyped_parameter
+        node['issues']['nodes'].forEach((issue) {
+          issueList.add(
+            IssueState(
+              title: issue['title'].toString(),
+              body: issue['body'].toString(),
+            ),
+          );
+        });
+
         return Future.value(
           RepositoryDetailState(
             repositoryName: node['name'].toString(),
@@ -42,6 +53,7 @@ Future<RepositoryDetailState> fetchRepositoryDetail(
             issuesCount: node['issues']['totalCount'].toString(),
             language: node['languages']['nodes'].first['name'].toString(),
             repositoryUrl: node['url'].toString(),
+            issueState: issueList,
           ),
         );
       } else {
