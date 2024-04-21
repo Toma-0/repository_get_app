@@ -1,8 +1,8 @@
 {
     "@@locale": "zh",
-    "titleHomeScreen": "Flutter 演示主屏幕",
+    "titleHomeScreen": "存储库搜索应用程序",
     "@titleHomeScreen": {
-        "description": "flutter demo home page"
+        "description": "App Title"
     },
     "labelSearch": "搜索",
     "@labelSearch": {

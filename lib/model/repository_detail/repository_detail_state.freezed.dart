@@ -32,6 +32,7 @@ mixin _$RepositoryDetailState {
   String get description => throw _privateConstructorUsedError;
   String get repositoryUrl => throw _privateConstructorUsedError;
   String get updatedAt => throw _privateConstructorUsedError;
+  List<IssueState> get issueState => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,7 +57,8 @@ abstract class $RepositoryDetailStateCopyWith<$Res> {
       String language,
       String description,
       String repositoryUrl,
-      String updatedAt});
+      String updatedAt,
+      List<IssueState> issueState});
 }
 
 /// @nodoc
@@ -84,6 +86,7 @@ class _$RepositoryDetailStateCopyWithImpl<$Res,
     Object? description = null,
     Object? repositoryUrl = null,
     Object? updatedAt = null,
+    Object? issueState = null,
   }) {
     return _then(_value.copyWith(
       repositoryName: null == repositoryName
@@ -130,6 +133,10 @@ class _$RepositoryDetailStateCopyWithImpl<$Res,
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as String,
+      issueState: null == issueState
+          ? _value.issueState
+          : issueState // ignore: cast_nullable_to_non_nullable
+              as List<IssueState>,
     ) as $Val);
   }
 }
@@ -154,7 +161,8 @@ abstract class _$$RepositoryDetailStateImplCopyWith<$Res>
       String language,
       String description,
       String repositoryUrl,
-      String updatedAt});
+      String updatedAt,
+      List<IssueState> issueState});
 }
 
 /// @nodoc
@@ -180,6 +188,7 @@ class __$$RepositoryDetailStateImplCopyWithImpl<$Res>
     Object? description = null,
     Object? repositoryUrl = null,
     Object? updatedAt = null,
+    Object? issueState = null,
   }) {
     return _then(_$RepositoryDetailStateImpl(
       repositoryName: null == repositoryName
@@ -226,6 +235,10 @@ class __$$RepositoryDetailStateImplCopyWithImpl<$Res>
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as String,
+      issueState: null == issueState
+          ? _value._issueState
+          : issueState // ignore: cast_nullable_to_non_nullable
+              as List<IssueState>,
     ));
   }
 }
@@ -244,7 +257,9 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
       required this.language,
       required this.description,
       required this.repositoryUrl,
-      required this.updatedAt});
+      required this.updatedAt,
+      required final List<IssueState> issueState})
+      : _issueState = issueState;
 
   factory _$RepositoryDetailStateImpl.fromJson(Map<String, dynamic> json) =>
       _$$RepositoryDetailStateImplFromJson(json);
@@ -271,10 +286,17 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
   final String repositoryUrl;
   @override
   final String updatedAt;
+  final List<IssueState> _issueState;
+  @override
+  List<IssueState> get issueState {
+    if (_issueState is EqualUnmodifiableListView) return _issueState;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_issueState);
+  }
 
   @override
   String toString() {
-    return 'RepositoryDetailState(repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starsCount: $starsCount, watchersCount: $watchersCount, forksCount: $forksCount, issuesCount: $issuesCount, language: $language, description: $description, repositoryUrl: $repositoryUrl, updatedAt: $updatedAt)';
+    return 'RepositoryDetailState(repositoryName: $repositoryName, ownerName: $ownerName, ownerImageUri: $ownerImageUri, starsCount: $starsCount, watchersCount: $watchersCount, forksCount: $forksCount, issuesCount: $issuesCount, language: $language, description: $description, repositoryUrl: $repositoryUrl, updatedAt: $updatedAt, issueState: $issueState)';
   }
 
   @override
@@ -303,7 +325,9 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
             (identical(other.repositoryUrl, repositoryUrl) ||
                 other.repositoryUrl == repositoryUrl) &&
             (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt));
+                other.updatedAt == updatedAt) &&
+            const DeepCollectionEquality()
+                .equals(other._issueState, _issueState));
   }
 
   @JsonKey(ignore: true)
@@ -320,7 +344,8 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
       language,
       description,
       repositoryUrl,
-      updatedAt);
+      updatedAt,
+      const DeepCollectionEquality().hash(_issueState));
 
   @JsonKey(ignore: true)
   @override
@@ -339,17 +364,19 @@ class _$RepositoryDetailStateImpl implements _RepositoryDetailState {
 
 abstract class _RepositoryDetailState implements RepositoryDetailState {
   const factory _RepositoryDetailState(
-      {required final String repositoryName,
-      required final String ownerName,
-      required final String ownerImageUri,
-      required final String starsCount,
-      required final String watchersCount,
-      required final String forksCount,
-      required final String issuesCount,
-      required final String language,
-      required final String description,
-      required final String repositoryUrl,
-      required final String updatedAt}) = _$RepositoryDetailStateImpl;
+          {required final String repositoryName,
+          required final String ownerName,
+          required final String ownerImageUri,
+          required final String starsCount,
+          required final String watchersCount,
+          required final String forksCount,
+          required final String issuesCount,
+          required final String language,
+          required final String description,
+          required final String repositoryUrl,
+          required final String updatedAt,
+          required final List<IssueState> issueState}) =
+      _$RepositoryDetailStateImpl;
 
   factory _RepositoryDetailState.fromJson(Map<String, dynamic> json) =
       _$RepositoryDetailStateImpl.fromJson;
@@ -376,6 +403,8 @@ abstract class _RepositoryDetailState implements RepositoryDetailState {
   String get repositoryUrl;
   @override
   String get updatedAt;
+  @override
+  List<IssueState> get issueState;
   @override
   @JsonKey(ignore: true)
   _$$RepositoryDetailStateImplCopyWith<_$RepositoryDetailStateImpl>

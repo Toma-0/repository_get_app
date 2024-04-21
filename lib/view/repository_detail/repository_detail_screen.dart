@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/text_l10n.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
+import 'package:repository_get_app/model/repository_detail/issue_state.dart';
 import 'package:repository_get_app/model/repository_detail/repository_detail_state.dart';
 import 'package:repository_get_app/resource/l10n/l10n_template.dart';
+import 'package:repository_get_app/view/component/card/issue_card.dart';
 import 'package:repository_get_app/view/component/card/show_widgets_card.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_context_with_image_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_counts_widget.dart';
@@ -58,8 +60,10 @@ class RepositoryDetailScreen extends ConsumerWidget {
                   I10n().messageWaitMoment,
             ),
           ),
-          loading: () => const Center(
-            child: CircularProgressIndicator(),
+          loading: () => const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
           ),
         );
   }
