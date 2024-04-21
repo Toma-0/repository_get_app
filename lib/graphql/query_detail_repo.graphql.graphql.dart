@@ -327,7 +327,7 @@ const documentNodeQueryGetDetailRepository = DocumentNode(definitions: [
                 alias: null,
                 arguments: [
                   ArgumentNode(
-                    name: NameNode(value: 'first'),
+                    name: NameNode(value: 'last'),
                     value: IntValueNode(value: '5'),
                   )
                 ],

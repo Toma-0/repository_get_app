@@ -8,7 +8,7 @@ query GetDetailRepository($id:ID!){
       watchers{
         totalCount
       }
-      issues(first:5)
+      issues(last:5)
       {
         nodes{
           title,

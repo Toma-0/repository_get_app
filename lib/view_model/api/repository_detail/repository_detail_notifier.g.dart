@@ -7,7 +7,7 @@ part of 'repository_detail_notifier.dart';
 // **************************************************************************
 
 String _$fetchRepositoryDetailHash() =>
-    r'a34eaf1d914f774791d67f3f37b45003f916ef67';
+    r'b0f408c8710a38f81bdef477b321d6d26515771b';
 
 /// Copied from Dart SDK
 class _SystemHash {
