@@ -7,7 +7,6 @@ part 'size_notifier.g.dart';
 @riverpod
 class SizeNotifier extends _$SizeNotifier {
   @override
-  // TODO(Toma-0): contextを引数に取らなくてもよい方法を考える
   SizeState build() {
     final pixelRatio =
         WidgetsBinding.instance.platformDispatcher.views.first.devicePixelRatio;
