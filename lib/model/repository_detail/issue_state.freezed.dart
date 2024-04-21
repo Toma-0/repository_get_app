@@ -22,6 +22,7 @@ IssueState _$IssueStateFromJson(Map<String, dynamic> json) {
 mixin _$IssueState {
   String get title => throw _privateConstructorUsedError;
   String get body => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,7 @@ abstract class $IssueStateCopyWith<$Res> {
           IssueState value, $Res Function(IssueState) then) =
       _$IssueStateCopyWithImpl<$Res, IssueState>;
   @useResult
-  $Res call({String title, String body});
+  $Res call({String title, String body, String url});
 }
 
 /// @nodoc
@@ -53,6 +54,7 @@ class _$IssueStateCopyWithImpl<$Res, $Val extends IssueState>
   $Res call({
     Object? title = null,
     Object? body = null,
+    Object? url = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -62,6 +64,10 @@ class _$IssueStateCopyWithImpl<$Res, $Val extends IssueState>
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -75,7 +81,7 @@ abstract class _$$IssueStateImplCopyWith<$Res>
       __$$IssueStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String body});
+  $Res call({String title, String body, String url});
 }
 
 /// @nodoc
@@ -91,6 +97,7 @@ class __$$IssueStateImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? body = null,
+    Object? url = null,
   }) {
     return _then(_$IssueStateImpl(
       title: null == title
@@ -101,6 +108,10 @@ class __$$IssueStateImplCopyWithImpl<$Res>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -108,7 +119,8 @@ class __$$IssueStateImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$IssueStateImpl implements _IssueState {
-  const _$IssueStateImpl({required this.title, required this.body});
+  const _$IssueStateImpl(
+      {required this.title, required this.body, required this.url});
 
   factory _$IssueStateImpl.fromJson(Map<String, dynamic> json) =>
       _$$IssueStateImplFromJson(json);
@@ -117,10 +129,12 @@ class _$IssueStateImpl implements _IssueState {
   final String title;
   @override
   final String body;
+  @override
+  final String url;
 
   @override
   String toString() {
-    return 'IssueState(title: $title, body: $body)';
+    return 'IssueState(title: $title, body: $body, url: $url)';
   }
 
   @override
@@ -129,12 +143,13 @@ class _$IssueStateImpl implements _IssueState {
         (other.runtimeType == runtimeType &&
             other is _$IssueStateImpl &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.body, body) || other.body == body));
+            (identical(other.body, body) || other.body == body) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, body);
+  int get hashCode => Object.hash(runtimeType, title, body, url);
 
   @JsonKey(ignore: true)
   @override
@@ -153,7 +168,8 @@ class _$IssueStateImpl implements _IssueState {
 abstract class _IssueState implements IssueState {
   const factory _IssueState(
       {required final String title,
-      required final String body}) = _$IssueStateImpl;
+      required final String body,
+      required final String url}) = _$IssueStateImpl;
 
   factory _IssueState.fromJson(Map<String, dynamic> json) =
       _$IssueStateImpl.fromJson;
@@ -162,6 +178,8 @@ abstract class _IssueState implements IssueState {
   String get title;
   @override
   String get body;
+  @override
+  String get url;
   @override
   @JsonKey(ignore: true)
   _$$IssueStateImplCopyWith<_$IssueStateImpl> get copyWith =>

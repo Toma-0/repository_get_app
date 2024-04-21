@@ -8,6 +8,7 @@ class IssueState with _$IssueState {
   const factory IssueState({
     required String title,
     required String body,
+    required String url,
   }) = _IssueState;
 
   factory IssueState.fromJson(Map<String, dynamic> json) =>

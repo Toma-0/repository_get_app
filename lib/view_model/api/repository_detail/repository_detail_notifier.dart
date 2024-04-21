@@ -36,6 +36,7 @@ Future<RepositoryDetailState> fetchRepositoryDetail(
             IssueState(
               title: issue['title'].toString(),
               body: issue['bodyText'].toString(),
+              url: issue['url'].toString(),
             ),
           );
         });

@@ -12,7 +12,8 @@ query GetDetailRepository($id:ID!){
       {
         nodes{
           title,
-          bodyText
+          bodyText,
+          url
         }
         totalCount
       }

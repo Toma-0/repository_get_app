@@ -354,6 +354,13 @@ const documentNodeQueryGetDetailRepository = DocumentNode(definitions: [
                         selectionSet: null,
                       ),
                       FieldNode(
+                        name: NameNode(value: 'url'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
                         name: NameNode(value: '__typename'),
                         alias: null,
                         arguments: [],
@@ -6075,6 +6082,7 @@ class Query$GetDetailRepository$node$$Repository$issues$nodes {
   Query$GetDetailRepository$node$$Repository$issues$nodes({
     required this.title,
     required this.bodyText,
+    required this.url,
     this.$__typename = 'Issue',
   });
 
@@ -6082,10 +6090,12 @@ class Query$GetDetailRepository$node$$Repository$issues$nodes {
       Map<String, dynamic> json) {
     final l$title = json['title'];
     final l$bodyText = json['bodyText'];
+    final l$url = json['url'];
     final l$$__typename = json['__typename'];
     return Query$GetDetailRepository$node$$Repository$issues$nodes(
       title: (l$title as String),
       bodyText: (l$bodyText as String),
+      url: (l$url as String),
       $__typename: (l$$__typename as String),
     );
   }
@@ -6093,6 +6103,8 @@ class Query$GetDetailRepository$node$$Repository$issues$nodes {
   final String title;
 
   final String bodyText;
+
+  final String url;
 
   final String $__typename;
 
@@ -6102,6 +6114,8 @@ class Query$GetDetailRepository$node$$Repository$issues$nodes {
     _resultData['title'] = l$title;
     final l$bodyText = bodyText;
     _resultData['bodyText'] = l$bodyText;
+    final l$url = url;
+    _resultData['url'] = l$url;
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -6111,10 +6125,12 @@ class Query$GetDetailRepository$node$$Repository$issues$nodes {
   int get hashCode {
     final l$title = title;
     final l$bodyText = bodyText;
+    final l$url = url;
     final l$$__typename = $__typename;
     return Object.hashAll([
       l$title,
       l$bodyText,
+      l$url,
       l$$__typename,
     ]);
   }
@@ -6136,6 +6152,11 @@ class Query$GetDetailRepository$node$$Repository$issues$nodes {
     final l$bodyText = bodyText;
     final lOther$bodyText = other.bodyText;
     if (l$bodyText != lOther$bodyText) {
+      return false;
+    }
+    final l$url = url;
+    final lOther$url = other.url;
+    if (l$url != lOther$url) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -6172,6 +6193,7 @@ abstract class CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes<
   TRes call({
     String? title,
     String? bodyText,
+    String? url,
     String? $__typename,
   });
 }
@@ -6195,6 +6217,7 @@ class _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues$nodes<
   TRes call({
     Object? title = _undefined,
     Object? bodyText = _undefined,
+    Object? url = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetDetailRepository$node$$Repository$issues$nodes(
@@ -6204,6 +6227,7 @@ class _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues$nodes<
         bodyText: bodyText == _undefined || bodyText == null
             ? _instance.bodyText
             : (bodyText as String),
+        url: url == _undefined || url == null ? _instance.url : (url as String),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
@@ -6222,6 +6246,7 @@ class _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$issues$nodes<
   call({
     String? title,
     String? bodyText,
+    String? url,
     String? $__typename,
   }) =>
       _res;
