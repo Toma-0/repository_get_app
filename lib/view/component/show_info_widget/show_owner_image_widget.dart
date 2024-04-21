@@ -13,7 +13,7 @@ class ShowOwnerImageCircleWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ratioWidth = ref.watch(SizeNotifierProvider(context)).ratioSizeWidth;
+    final ratioWidth = ref.watch(sizeNotifierProvider).ratioSizeWidth;
 
     return Container(
       width: ratioWidth * sizeCircle,

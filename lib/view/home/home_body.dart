@@ -10,8 +10,7 @@ class HomeBody extends ConsumerWidget {
     return RefreshIndicator(
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal:
-              ref.watch(SizeNotifierProvider(context)).ratioSizeWidth * 2,
+          horizontal: ref.watch(sizeNotifierProvider).ratioSizeWidth * 2,
         ),
         child: ref
             .watch(
