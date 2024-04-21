@@ -16,8 +16,8 @@ class ShowContextWithImage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ratioWidth = ref.watch(SizeNotifierProvider(context)).ratioSizeWidth;
-    final ratioHeight = ref.watch(SizeNotifierProvider(context)).ratioSizeHight;
+    final ratioWidth = ref.watch(sizeNotifierProvider).ratioSizeWidth;
+    final ratioHeight = ref.watch(sizeNotifierProvider).ratioSizeHight;
     return Center(
       child: SizedBox(
         height: ratioHeight * 70,

@@ -7,12 +7,15 @@ part 'size_notifier.g.dart';
 @riverpod
 class SizeNotifier extends _$SizeNotifier {
   @override
-  // TODO(Toma-0): contextを引数に取らなくてもよい方法を考える
-  // ignore: avoid_build_context_in_providers
-  SizeState build(BuildContext context) {
-    final mediaQueryData = MediaQuery.of(context);
-    final screenWidth = mediaQueryData.size.width;
-    final screenHeight = mediaQueryData.size.height;
+  SizeState build() {
+    final pixelRatio =
+        WidgetsBinding.instance.platformDispatcher.views.first.devicePixelRatio;
+
+    final mediaQueryData =
+        WidgetsBinding.instance.platformDispatcher.views.first.physicalSize /
+            pixelRatio;
+    final screenWidth = mediaQueryData.width;
+    final screenHeight = mediaQueryData.height;
 
     return SizeState(
       ratioSizeHight: screenHeight / 100,

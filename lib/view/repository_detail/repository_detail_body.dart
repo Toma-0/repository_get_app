@@ -9,7 +9,7 @@ class RepositoryDetailBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final ratioHeight = ref.watch(SizeNotifierProvider(context)).ratioSizeHight;
+    final ratioHeight = ref.watch(sizeNotifierProvider).ratioSizeHight;
 
     return Column(
       children: [
