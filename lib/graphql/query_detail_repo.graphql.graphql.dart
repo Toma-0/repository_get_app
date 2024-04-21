@@ -325,9 +325,43 @@ const documentNodeQueryGetDetailRepository = DocumentNode(definitions: [
               FieldNode(
                 name: NameNode(value: 'issues'),
                 alias: null,
-                arguments: [],
+                arguments: [
+                  ArgumentNode(
+                    name: NameNode(value: 'first'),
+                    value: IntValueNode(value: '5'),
+                  )
+                ],
                 directives: [],
                 selectionSet: SelectionSetNode(selections: [
+                  FieldNode(
+                    name: NameNode(value: 'nodes'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                        name: NameNode(value: 'title'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'bodyText'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ]),
+                  ),
                   FieldNode(
                     name: NameNode(value: 'totalCount'),
                     alias: null,
@@ -5847,19 +5881,29 @@ class _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$watchers<
 
 class Query$GetDetailRepository$node$$Repository$issues {
   Query$GetDetailRepository$node$$Repository$issues({
+    this.nodes,
     required this.totalCount,
     this.$__typename = 'IssueConnection',
   });
 
   factory Query$GetDetailRepository$node$$Repository$issues.fromJson(
       Map<String, dynamic> json) {
+    final l$nodes = json['nodes'];
     final l$totalCount = json['totalCount'];
     final l$$__typename = json['__typename'];
     return Query$GetDetailRepository$node$$Repository$issues(
+      nodes: (l$nodes as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Query$GetDetailRepository$node$$Repository$issues$nodes
+                  .fromJson((e as Map<String, dynamic>)))
+          .toList(),
       totalCount: (l$totalCount as int),
       $__typename: (l$$__typename as String),
     );
   }
+
+  final List<Query$GetDetailRepository$node$$Repository$issues$nodes?>? nodes;
 
   final int totalCount;
 
@@ -5867,6 +5911,8 @@ class Query$GetDetailRepository$node$$Repository$issues {
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
+    final l$nodes = nodes;
+    _resultData['nodes'] = l$nodes?.map((e) => e?.toJson()).toList();
     final l$totalCount = totalCount;
     _resultData['totalCount'] = l$totalCount;
     final l$$__typename = $__typename;
@@ -5876,9 +5922,11 @@ class Query$GetDetailRepository$node$$Repository$issues {
 
   @override
   int get hashCode {
+    final l$nodes = nodes;
     final l$totalCount = totalCount;
     final l$$__typename = $__typename;
     return Object.hashAll([
+      l$nodes == null ? null : Object.hashAll(l$nodes.map((v) => v)),
       l$totalCount,
       l$$__typename,
     ]);
@@ -5891,6 +5939,22 @@ class Query$GetDetailRepository$node$$Repository$issues {
     }
     if (!(other is Query$GetDetailRepository$node$$Repository$issues) ||
         runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$nodes = nodes;
+    final lOther$nodes = other.nodes;
+    if (l$nodes != null && lOther$nodes != null) {
+      if (l$nodes.length != lOther$nodes.length) {
+        return false;
+      }
+      for (int i = 0; i < l$nodes.length; i++) {
+        final l$nodes$entry = l$nodes[i];
+        final lOther$nodes$entry = lOther$nodes[i];
+        if (l$nodes$entry != lOther$nodes$entry) {
+          return false;
+        }
+      }
+    } else if (l$nodes != lOther$nodes) {
       return false;
     }
     final l$totalCount = totalCount;
@@ -5930,9 +5994,16 @@ abstract class CopyWith$Query$GetDetailRepository$node$$Repository$issues<
       _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$issues;
 
   TRes call({
+    List<Query$GetDetailRepository$node$$Repository$issues$nodes?>? nodes,
     int? totalCount,
     String? $__typename,
   });
+  TRes nodes(
+      Iterable<Query$GetDetailRepository$node$$Repository$issues$nodes?>? Function(
+              Iterable<
+                  CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes<
+                      Query$GetDetailRepository$node$$Repository$issues$nodes>?>?)
+          _fn);
 }
 
 class _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues<TRes>
@@ -5950,10 +6021,15 @@ class _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
+    Object? nodes = _undefined,
     Object? totalCount = _undefined,
     Object? $__typename = _undefined,
   }) =>
       _then(Query$GetDetailRepository$node$$Repository$issues(
+        nodes: nodes == _undefined
+            ? _instance.nodes
+            : (nodes as List<
+                Query$GetDetailRepository$node$$Repository$issues$nodes?>?),
         totalCount: totalCount == _undefined || totalCount == null
             ? _instance.totalCount
             : (totalCount as int),
@@ -5961,6 +6037,20 @@ class _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues<TRes>
             ? _instance.$__typename
             : ($__typename as String),
       ));
+
+  TRes nodes(
+          Iterable<Query$GetDetailRepository$node$$Repository$issues$nodes?>? Function(
+                  Iterable<
+                      CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes<
+                          Query$GetDetailRepository$node$$Repository$issues$nodes>?>?)
+              _fn) =>
+      call(
+          nodes: _fn(_instance.nodes?.map((e) => e == null
+              ? null
+              : CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes(
+                  e,
+                  (i) => i,
+                )))?.toList());
 }
 
 class _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$issues<TRes>
@@ -5972,7 +6062,166 @@ class _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$issues<TRes>
   TRes _res;
 
   call({
+    List<Query$GetDetailRepository$node$$Repository$issues$nodes?>? nodes,
     int? totalCount,
+    String? $__typename,
+  }) =>
+      _res;
+
+  nodes(_fn) => _res;
+}
+
+class Query$GetDetailRepository$node$$Repository$issues$nodes {
+  Query$GetDetailRepository$node$$Repository$issues$nodes({
+    required this.title,
+    required this.bodyText,
+    this.$__typename = 'Issue',
+  });
+
+  factory Query$GetDetailRepository$node$$Repository$issues$nodes.fromJson(
+      Map<String, dynamic> json) {
+    final l$title = json['title'];
+    final l$bodyText = json['bodyText'];
+    final l$$__typename = json['__typename'];
+    return Query$GetDetailRepository$node$$Repository$issues$nodes(
+      title: (l$title as String),
+      bodyText: (l$bodyText as String),
+      $__typename: (l$$__typename as String),
+    );
+  }
+
+  final String title;
+
+  final String bodyText;
+
+  final String $__typename;
+
+  Map<String, dynamic> toJson() {
+    final _resultData = <String, dynamic>{};
+    final l$title = title;
+    _resultData['title'] = l$title;
+    final l$bodyText = bodyText;
+    _resultData['bodyText'] = l$bodyText;
+    final l$$__typename = $__typename;
+    _resultData['__typename'] = l$$__typename;
+    return _resultData;
+  }
+
+  @override
+  int get hashCode {
+    final l$title = title;
+    final l$bodyText = bodyText;
+    final l$$__typename = $__typename;
+    return Object.hashAll([
+      l$title,
+      l$bodyText,
+      l$$__typename,
+    ]);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (!(other is Query$GetDetailRepository$node$$Repository$issues$nodes) ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$title = title;
+    final lOther$title = other.title;
+    if (l$title != lOther$title) {
+      return false;
+    }
+    final l$bodyText = bodyText;
+    final lOther$bodyText = other.bodyText;
+    if (l$bodyText != lOther$bodyText) {
+      return false;
+    }
+    final l$$__typename = $__typename;
+    final lOther$$__typename = other.$__typename;
+    if (l$$__typename != lOther$$__typename) {
+      return false;
+    }
+    return true;
+  }
+}
+
+extension UtilityExtension$Query$GetDetailRepository$node$$Repository$issues$nodes
+    on Query$GetDetailRepository$node$$Repository$issues$nodes {
+  CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes<
+          Query$GetDetailRepository$node$$Repository$issues$nodes>
+      get copyWith =>
+          CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes(
+            this,
+            (i) => i,
+          );
+}
+
+abstract class CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes<
+    TRes> {
+  factory CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes(
+    Query$GetDetailRepository$node$$Repository$issues$nodes instance,
+    TRes Function(Query$GetDetailRepository$node$$Repository$issues$nodes) then,
+  ) = _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues$nodes;
+
+  factory CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes.stub(
+          TRes res) =
+      _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$issues$nodes;
+
+  TRes call({
+    String? title,
+    String? bodyText,
+    String? $__typename,
+  });
+}
+
+class _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues$nodes<
+        TRes>
+    implements
+        CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes<TRes> {
+  _CopyWithImpl$Query$GetDetailRepository$node$$Repository$issues$nodes(
+    this._instance,
+    this._then,
+  );
+
+  final Query$GetDetailRepository$node$$Repository$issues$nodes _instance;
+
+  final TRes Function(Query$GetDetailRepository$node$$Repository$issues$nodes)
+      _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? title = _undefined,
+    Object? bodyText = _undefined,
+    Object? $__typename = _undefined,
+  }) =>
+      _then(Query$GetDetailRepository$node$$Repository$issues$nodes(
+        title: title == _undefined || title == null
+            ? _instance.title
+            : (title as String),
+        bodyText: bodyText == _undefined || bodyText == null
+            ? _instance.bodyText
+            : (bodyText as String),
+        $__typename: $__typename == _undefined || $__typename == null
+            ? _instance.$__typename
+            : ($__typename as String),
+      ));
+}
+
+class _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$issues$nodes<
+        TRes>
+    implements
+        CopyWith$Query$GetDetailRepository$node$$Repository$issues$nodes<TRes> {
+  _CopyWithStubImpl$Query$GetDetailRepository$node$$Repository$issues$nodes(
+      this._res);
+
+  TRes _res;
+
+  call({
+    String? title,
+    String? bodyText,
     String? $__typename,
   }) =>
       _res;

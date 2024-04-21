@@ -2,13 +2,18 @@
 query GetDetailRepository($id:ID!){
   node(id:$id) {
     ... on Repository {
-      name
+       name
       stargazerCount
       forkCount
       watchers{
         totalCount
       }
-      issues{
+      issues(first:5)
+      {
+        nodes{
+          title,
+          bodyText
+        }
         totalCount
       }
       updatedAt
