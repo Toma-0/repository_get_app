@@ -17,19 +17,19 @@ Dart:3.3.3<br>
 DevTools:2.31.1<br>
 
 ## App画像
-検索前
+検索前<br>
 ![image](https://github.com/Toma-0/repository_get_app/assets/69076412/1b284b65-9574-4f50-869f-144b36d87aed)
 
-検索結果
+検索結果<br>
 ![image](https://github.com/Toma-0/repository_get_app/assets/69076412/51a37aa2-8c81-4534-85c0-ef1f9e3b273a)
 
-詳細画面
+詳細画面<br>
 ![image](https://github.com/Toma-0/repository_get_app/assets/69076412/ed11eda5-1c7a-4cf3-8d45-78fa954cc400)
 
-リポジトリが存在しないときの画面
+リポジトリが存在しないときの画面<br>
 ![image](https://github.com/Toma-0/repository_get_app/assets/69076412/b66f48f7-7d3f-48f6-912e-4ff84a131678)
 
-エラーが起こったときの画面
+エラーが起こったときの画面<br>
 ![image](https://github.com/Toma-0/repository_get_app/assets/69076412/aec241fb-3138-4f24-bd17-c5fa61c62419)
 
 ## デモ動画
