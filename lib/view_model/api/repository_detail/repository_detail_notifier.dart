@@ -35,7 +35,7 @@ Future<RepositoryDetailState> fetchRepositoryDetail(
           issueList.add(
             IssueState(
               title: issue['title'].toString(),
-              body: issue['body'].toString(),
+              body: issue['bodyText'].toString(),
             ),
           );
         });
@@ -49,7 +49,7 @@ Future<RepositoryDetailState> fetchRepositoryDetail(
             ownerName: node['owner']['login'].toString(),
             ownerImageUri: node['owner']['avatarUrl'].toString(),
             watchersCount: node['watchers']['totalCount'].toString(),
-            forksCount: node['forksCount'].toString(),
+            forksCount: node['forkCount'].toString(),
             issuesCount: node['issues']['totalCount'].toString(),
             language: node['languages']['nodes'].first['name'].toString(),
             repositoryUrl: node['url'].toString(),
