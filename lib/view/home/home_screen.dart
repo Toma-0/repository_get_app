@@ -11,6 +11,7 @@ import 'package:repository_get_app/view/component/show_info_widget/show_context_
 import 'package:repository_get_app/view/repository_detail/repository_detail_screen.dart';
 import 'package:repository_get_app/view_model/api/graphql_client/graphql_client.dart';
 import 'package:repository_get_app/view_model/api/repository_list/repository_list_notifier.dart';
+import 'package:repository_get_app/view_model/common/screen_transition_animation.dart';
 import 'package:repository_get_app/view_model/home/home_screen_notifier.dart';
 import 'package:repository_get_app/view_model/size/size_notifier.dart';
 
