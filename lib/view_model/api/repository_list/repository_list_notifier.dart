@@ -1,14 +1,15 @@
 // ignore_for_file: avoid_dynamic_calls
 
 import 'package:repository_get_app/graphql/query_serch_repo.graphql.dart';
+import 'package:repository_get_app/model/repository_list/repository_list_notifier_state.dart';
 import 'package:repository_get_app/model/repository_list/repository_list_state.dart';
-import 'package:repository_get_app/model/repository_list_notifier/repository_list_notifier_state.dart';
 import 'package:repository_get_app/view_model/api/graphql_client/graphql_client.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'repository_list_notifier.g.dart';
 
 // TODO(Toma-0): この形で引数を持たせるのはあまり良くなかった気がしている。
+// なぜダメだったかおよび適切な実装方法を質問したい。
 @riverpod
 Future<RepositoryListNotifierState> fetchRepositoryList(
   FetchRepositoryListRef ref,

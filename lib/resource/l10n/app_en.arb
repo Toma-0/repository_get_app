@@ -1,8 +1,8 @@
 {
     "@@locale": "en",
-    "titleHomeScreen": "Flutter Demo Home Page",
+    "titleHomeScreen": "Repository Search App",
     "@titleHomeScreen": {
-        "description": "flutter demo home page"
+        "description": "App Title"
     },
     "labelSearch": "Search",
     "@labelSearch": {

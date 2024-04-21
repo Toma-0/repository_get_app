@@ -28,7 +28,7 @@ class HomeScreen extends ConsumerWidget {
     return GraphQLProvider(
       client: ValueNotifier<GraphQLClient>(ref.watch(graphQLClientProvider)),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Repository Search App',
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         theme: ThemeData(

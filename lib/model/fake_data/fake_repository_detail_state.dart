@@ -10,6 +10,7 @@ class FakesRepositoryDetail {
     forksCount: '30',
     issuesCount: '40',
     language: 'Dart',
+    issueState: [],
     description: 'This is an example repository.',
     repositoryUrl: 'https://github.com/example/example-repo',
     updatedAt: '2024-04-16T10:00:00Z',

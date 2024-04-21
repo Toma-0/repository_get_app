@@ -1,8 +1,8 @@
 {
     "@@locale": "ja",
-    "titleHomeScreen": "Flutter Demo ホーム画面",
+    "titleHomeScreen": "リポジトリ検索アプリ",
     "@titleHomeScreen": {
-        "description": "flutter demo home page"
+        "description": "App Title"
     },
     "labelSearch": "検索",
     "@labelSearch": {

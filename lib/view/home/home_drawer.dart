@@ -5,6 +5,23 @@ class HomeDrawer extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //カラーテーマによって表示する文言を変更する
+    // TODO(Toma-0): AppLocalizations.of(context)をcontextを読み込まなくても表示する方法を探す。
+    // あった場合は、homeScreenNotifierに書きメソッドを移動させたい。
+    String currentColorTheme() {
+      switch (ref.watch(homeScreenNotifierProvider).colorThemeMode) {
+        case ThemeMode.dark:
+          return AppLocalizations.of(context)?.labelThemeModeDark ??
+              I10n().labelThemeModeDark;
+        case ThemeMode.light:
+          return AppLocalizations.of(context)?.labelThemeModeLight ??
+              I10n().labelThemeModeLight;
+        case ThemeMode.system:
+          return AppLocalizations.of(context)?.labelThemeModeSystem ??
+              I10n().labelThemeModeSystem;
+      }
+    }
+
     return Drawer(
       child: ListView(
         children: ListTile.divideTiles(
@@ -19,9 +36,7 @@ class HomeDrawer extends ConsumerWidget {
             ListTile(
               leading: const Icon(Icons.settings_brightness),
               title: Text(
-                ref
-                    .read(homeScreenNotifierProvider.notifier)
-                    .currentColorTheme(context),
+                currentColorTheme(),
               ),
               onTap: () => showDialog<Widget>(
                 context: context,
