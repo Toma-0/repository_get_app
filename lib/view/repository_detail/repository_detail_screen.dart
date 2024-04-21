@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:repository_get_app/model/repository_detail/issue_state.dart';
 import 'package:repository_get_app/model/repository_detail/repository_detail_state.dart';
 import 'package:repository_get_app/resource/l10n/l10n_template.dart';
+import 'package:repository_get_app/view/component/card/issue_card.dart';
 import 'package:repository_get_app/view/component/card/show_widgets_card.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_context_with_image_widget.dart';
 import 'package:repository_get_app/view/component/show_info_widget/show_counts_widget.dart';
