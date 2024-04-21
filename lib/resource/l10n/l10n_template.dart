@@ -6,7 +6,7 @@ class I10n {
   static I10n? _instance;
 
   //title:ヘッダーに表示されるテキスト
-  String get titleHome => 'Flutter Demo Home Page';
+  String get titleHome => 'Repository Search App';
 
   //label:ボタンなどに使用される機能や状態を指すテキスト
   String get labelSearch => 'Search';

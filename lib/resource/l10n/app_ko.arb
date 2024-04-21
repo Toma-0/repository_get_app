@@ -1,8 +1,8 @@
 {
     "@@locale": "ko",
-    "titleHomeScreen": "Flutter 데모 홈 화면",
+    "titleHomeScreen": "리포지토리 검색 앱",
     "@titleHomeScreen": {
-        "description": "flutter demo home page"
+        "description": "리포지토리 검색 앱"
     },
     "labelSearch": "검색",
     "@labelSearch": {
