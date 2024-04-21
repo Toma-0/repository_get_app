@@ -58,8 +58,10 @@ class RepositoryDetailScreen extends ConsumerWidget {
                   I10n().messageWaitMoment,
             ),
           ),
-          loading: () => const Center(
-            child: CircularProgressIndicator(),
+          loading: () => const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
           ),
         );
   }
