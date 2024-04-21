@@ -9,6 +9,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'repository_list_notifier.g.dart';
 
 // TODO(Toma-0): この形で引数を持たせるのはあまり良くなかった気がしている。
+// なぜダメだったかおよび適切な実装方法を質問したい。
 @riverpod
 Future<RepositoryListNotifierState> fetchRepositoryList(
   FetchRepositoryListRef ref,
