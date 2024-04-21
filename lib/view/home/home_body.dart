@@ -78,9 +78,24 @@ class HomeBody extends ConsumerWidget {
                       ),
                       onTap: () {
                         Navigator.of(context).push(
-                          MaterialPageRoute<Scaffold>(
-                            builder: (context) => RepositoryDetailScreen(
-                              id: data.repositoryListState[index].id,
+                          PageRouteBuilder<Scaffold>(
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) {
+                              return RepositoryDetailScreen(
+                                id: data.repositoryListState[index].id,
+                              );
+                            },
+                            transitionsBuilder: (
+                              context,
+                              animation,
+                              secondaryAnimation,
+                              child,
+                            ) =>
+                                ref.read(
+                              PushPageTransitionAnimationProvider(
+                                animation,
+                                child,
+                              ),
                             ),
                           ),
                         );
