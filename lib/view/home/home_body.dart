@@ -107,8 +107,13 @@ class HomeBody extends ConsumerWidget {
               ),
             ),
       ),
-      onRefresh: () =>
-          ref.refresh(FetchRepositoryListProvider('test', 20, '').future),
+      onRefresh: () => ref.refresh(
+        FetchRepositoryListProvider(
+          ref.watch(homeScreenNotifierProvider).serchWords,
+          ref.watch(homeScreenNotifierProvider).itemCount,
+          '',
+        ).future,
+      ),
     );
   }
 }
