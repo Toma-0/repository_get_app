@@ -29,22 +29,18 @@ class SearchFieldAppBar extends ConsumerWidget {
               AppLocalizations.of(context)?.labelSearch ?? I10n().labelSearch,
         ),
         onChanged: (text) {
-          ref.watch(homeScreenNotifierProvider.notifier).changeSerchWord(text);
-          ref.watch(homeScreenNotifierProvider.notifier).initStateSearchList();
+          ref.read(homeScreenNotifierProvider.notifier).changeSerchWord(text);
+          ref.read(homeScreenNotifierProvider.notifier).initStateSearchList();
         },
       ),
       actions: [
         IconButton(
           icon: const Icon(Icons.clear),
           onPressed: () {
-            ref.watch(homeScreenNotifierProvider.notifier).changeSerchWord('');
-            ref
-                .watch(homeScreenNotifierProvider.notifier)
-                .initStateSearchList();
+            ref.read(homeScreenNotifierProvider.notifier).changeSerchWord('');
+            ref.read(homeScreenNotifierProvider.notifier).initStateSearchList();
 
-            ref
-                .watch(homeScreenNotifierProvider.notifier)
-                .changeSearchRelated();
+            ref.read(homeScreenNotifierProvider.notifier).changeSearchRelated();
           },
         ),
       ],
@@ -66,7 +62,7 @@ class ShowTitleAppBar extends ConsumerWidget {
         IconButton(
           icon: const Icon(Icons.search),
           onPressed: () => ref
-              .watch(homeScreenNotifierProvider.notifier)
+              .read(homeScreenNotifierProvider.notifier)
               .changeSearchRelated(),
         ),
       ],
