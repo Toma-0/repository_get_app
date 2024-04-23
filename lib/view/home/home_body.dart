@@ -7,6 +7,16 @@ class HomeBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final searchWord = ref.watch(
+      homeScreenNotifierProvider.select(
+        (value) => value.serchWords,
+      ),
+    );
+    final itemCount = ref.watch(
+      homeScreenNotifierProvider.select(
+        (value) => value.itemCount,
+      ),
+    );
     return RefreshIndicator(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -15,15 +25,16 @@ class HomeBody extends ConsumerWidget {
         child: ref
             .watch(
               FetchRepositoryListProvider(
-                ref.watch(homeScreenNotifierProvider).serchWords,
-                ref.watch(homeScreenNotifierProvider).itemCount,
+                searchWord,
+                itemCount,
                 '',
               ),
             )
             .when(
               data: (data) {
                 if (data.repositoryListState.isEmpty) {
-                  if (ref.watch(homeScreenNotifierProvider).serchWords == '') {
+                  //まだ検索されていないとき
+                  if (searchWord == '') {
                     return ListView(
                       dragStartBehavior: DragStartBehavior.down,
                       children: [
@@ -39,6 +50,7 @@ class HomeBody extends ConsumerWidget {
                       ],
                     );
                   }
+                  //検索したものの該当するリポジトリがなかった時
                   return ListView(
                     dragStartBehavior: DragStartBehavior.down,
                     children: [
@@ -109,8 +121,8 @@ class HomeBody extends ConsumerWidget {
       ),
       onRefresh: () => ref.refresh(
         FetchRepositoryListProvider(
-          ref.watch(homeScreenNotifierProvider).serchWords,
-          ref.watch(homeScreenNotifierProvider).itemCount,
+          searchWord,
+          itemCount,
           '',
         ).future,
       ),
