@@ -1,5 +1,5 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
-import 'package:repository_get_app/resource/token/token.dart';
+import 'package:repository_get_app/.token/token.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'graphql_client.g.dart';
